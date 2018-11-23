@@ -58,6 +58,7 @@ public class AppConfiguration extends WebMvcConfigurerAdapter implements Applica
         resolver.setPrefix("/WEB-INF/views/");
         resolver.setSuffix(".html");
         resolver.setTemplateMode(TemplateMode.HTML);
+        resolver.setCharacterEncoding("utf-8");
         return resolver;
     }
 }

@@ -1,209 +1,206 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<title>Komis Samochodowy ELO</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-	<link href="style.css" rel="stylesheet">
+	<link href="../../../../../../Bootstrap/style.css" rel="stylesheet">
 </head>
 <body>
+	<!-- Navigation Bar -->
+	<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#"><img src="../../../../../../Bootstrap/img/eluwa.png"></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Szukaj</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Samochód</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Klient</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Transakcja</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Konto</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Wyloguj</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- Navigation Bar -->
 
-<!-- Navigation Bar -->
-<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
-<div class="container-fluid">
-	<a class="navbar-brand" href="#"><img src="img/eluwa.png"></a>
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"> 
-		<span class="navbar-toggler-icon"></span>	
-	</button>
-	<div class="collapse navbar-collapse" id="navbarResponsive">
-		<ul class="navbar-nav ml-auto">
-			<li class="nav-item active">
-				<a class="nav-link" href="#">Szukaj</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">Samochód</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">Klient</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">Transakcja</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">Konto</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">Wyloguj</a>
-			</li>
-		</ul>
-	<div>
-</div>
-</nav>
+	<input type="text" id="myBrand" onkeyup="getBrand()" placeholder="Wyszukaj markę">
+	<input type="text" id="myModel" onkeyup="getModel()" placeholder="Wyszukaj model">
+	<input type="text" id="myPrize" onkeyup="getPrize()" placeholder="Wyszukaj cenę">
 
 
-<input type="text" id="myBrand" onkeyup="getBrand()" placeholder="Wyszukaj markę">
-<input type="text" id="myModel" onkeyup="getModel()" placeholder="Wyszukaj model">
-<input type="text" id="myPrize" onkeyup="getPrize()" placeholder="Wyszukaj cenę">
-
-
-<table class="table" id="myTable">
-  <thead class="thead-light">
-    <tr>
-<th onclick="sortTable(0)">ID</th>
-<th onclick="sortTable(1)">Marka</th>
-<th onclick="sortTable(2)">Model</th>
-<th onclick="sortTable(3)">Cena</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr class="item">
-      <td>1</td>
-      <td>Mercedes</td>
-      <td>eCorsa</td>
-      <td>10500</td>
-    </tr>
-    <tr class="item">
-      <td>2</th>
-      <td>dOpel</td>
-      <td>aorsa</td>
-      <td>11500</td>
-    </tr>
-    <tr class="item">
-      <td>3</th>
-      <td>eOpel</td>
-      <td>borsa</td>
-      <td>12000</td>
-    </tr>
-  </tbody>
-</table>
-
+	<table class="table" id="myTable">
+	  <thead class="thead-light">
+		<tr>
+	<th onclick="sortTable(0)">ID</th>
+	<th onclick="sortTable(1)">Marka</th>
+	<th onclick="sortTable(2)">Model</th>
+	<th onclick="sortTable(3)">Cena</th>
+		</tr>
+	  </thead>
+	  <tbody>
+		<tr class="item">
+		  <td>1</td>
+		  <td>Mercedes</td>
+		  <td>eCorsa</td>
+		  <td>10500</td>
+		</tr>
+		<tr class="item">
+		  <td>2</th>
+		  <td>dOpel</td>
+		  <td>aorsa</td>
+		  <td>11500</td>
+		</tr>
+		<tr class="item">
+		  <td>3</th>
+		  <td>eOpel</td>
+		  <td>borsa</td>
+		  <td>12000</td>
+		</tr>
+	  </tbody>
+	</table>
 
 
 
-<script type="text/javascript">
-function getBrand() {
-  var input, filter, table, tr, td, i;
-  input = document.getElementById("myBrand");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("myTable");
-  tr = table.getElementsByTagName("tr");
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[1];
-    if (td) {
-      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }       
-  }
-}
-</script>
+
+	<script type="text/javascript">
+	function getBrand() {
+	  var input, filter, table, tr, td, i;
+	  input = document.getElementById("myBrand");
+	  filter = input.value.toUpperCase();
+	  table = document.getElementById("myTable");
+	  tr = table.getElementsByTagName("tr");
+	  for (i = 0; i < tr.length; i++) {
+		td = tr[i].getElementsByTagName("td")[1];
+		if (td) {
+		  if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+			tr[i].style.display = "";
+		  } else {
+			tr[i].style.display = "none";
+		  }
+		}
+	  }
+	}
+	</script>
 
 
-<script type="text/javascript">
-function getModel() {
-  var input, filter, table, tr, td, i;
-  input = document.getElementById("myModel");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("myTable");
-  tr = table.getElementsByTagName("tr");
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[2];
-    if (td) {
-      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }       
-  }
-}
-</script>
+	<script type="text/javascript">
+	function getModel() {
+	  var input, filter, table, tr, td, i;
+	  input = document.getElementById("myModel");
+	  filter = input.value.toUpperCase();
+	  table = document.getElementById("myTable");
+	  tr = table.getElementsByTagName("tr");
+	  for (i = 0; i < tr.length; i++) {
+		td = tr[i].getElementsByTagName("td")[2];
+		if (td) {
+		  if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+			tr[i].style.display = "";
+		  } else {
+			tr[i].style.display = "none";
+		  }
+		}
+	  }
+	}
+	</script>
 
 
-<script type="text/javascript">
-function getPrize() {
-  var input, filter, table, tr, td, i;
-  input = document.getElementById("myPrize");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("myTable");
-  tr = table.getElementsByTagName("tr");
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[3];
-    if (td) {
-      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }       
-  }
-}
-</script>
+	<script type="text/javascript">
+	function getPrize() {
+	  var input, filter, table, tr, td, i;
+	  input = document.getElementById("myPrize");
+	  filter = input.value.toUpperCase();
+	  table = document.getElementById("myTable");
+	  tr = table.getElementsByTagName("tr");
+	  for (i = 0; i < tr.length; i++) {
+		td = tr[i].getElementsByTagName("td")[3];
+		if (td) {
+		  if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+			tr[i].style.display = "";
+		  } else {
+			tr[i].style.display = "none";
+		  }
+		}
+	  }
+	}
+	</script>
 
-<script type="text/javascript">
-function sortTable(n) {
-  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-  table = document.getElementById("myTable");
-  switching = true;
-  // Set the sorting direction to ascending:
-  dir = "asc"; 
-  /* Make a loop that will continue until
-  no switching has been done: */
-  while (switching) {
-    // Start by saying: no switching is done:
-    switching = false;
-    rows = table.rows;
-    /* Loop through all table rows (except the
-    first, which contains table headers): */
-    for (i = 1; i < (rows.length - 1); i++) {
-      // Start by saying there should be no switching:
-      shouldSwitch = false;
-      /* Get the two elements you want to compare,
-      one from current row and one from the next: */
-      x = rows[i].getElementsByTagName("td")[n];
-      y = rows[i + 1].getElementsByTagName("td")[n];
-      /* Check if the two rows should switch place,
-      based on the direction, asc or desc: */
-      if (dir == "asc") {
-        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-          // If so, mark as a switch and break the loop:
-          shouldSwitch = true;
-          break;
-        }
-      } else if (dir == "desc") {
-        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-          // If so, mark as a switch and break the loop:
-          shouldSwitch = true;
-          break;
-        }
-      }
-    }
-    if (shouldSwitch) {
-      /* If a switch has been marked, make the switch
-      and mark that a switch has been done: */
-      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-      switching = true;
-      // Each time a switch is done, increase this count by 1:
-      switchcount ++; 
-    } else {
-      /* If no switching has been done AND the direction is "asc",
-      set the direction to "desc" and run the while loop again. */
-      if (switchcount == 0 && dir == "asc") {
-        dir = "desc";
-        switching = true;
-      }
-    }
-  }
-}
-</script>
-
-
+	<script type="text/javascript">
+	function sortTable(n) {
+	  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+	  table = document.getElementById("myTable");
+	  switching = true;
+	  // Set the sorting direction to ascending:
+	  dir = "asc";
+	  /* Make a loop that will continue until
+	  no switching has been done: */
+	  while (switching) {
+		// Start by saying: no switching is done:
+		switching = false;
+		rows = table.rows;
+		/* Loop through all table rows (except the
+		first, which contains table headers): */
+		for (i = 1; i < (rows.length - 1); i++) {
+		  // Start by saying there should be no switching:
+		  shouldSwitch = false;
+		  /* Get the two elements you want to compare,
+		  one from current row and one from the next: */
+		  x = rows[i].getElementsByTagName("td")[n];
+		  y = rows[i + 1].getElementsByTagName("td")[n];
+		  /* Check if the two rows should switch place,
+		  based on the direction, asc or desc: */
+		  if (dir == "asc") {
+			if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+			  // If so, mark as a switch and break the loop:
+			  shouldSwitch = true;
+			  break;
+			}
+		  } else if (dir == "desc") {
+			if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+			  // If so, mark as a switch and break the loop:
+			  shouldSwitch = true;
+			  break;
+			}
+		  }
+		}
+		if (shouldSwitch) {
+		  /* If a switch has been marked, make the switch
+		  and mark that a switch has been done: */
+		  rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+		  switching = true;
+		  // Each time a switch is done, increase this count by 1:
+		  switchcount ++;
+		} else {
+		  /* If no switching has been done AND the direction is "asc",
+		  set the direction to "desc" and run the while loop again. */
+		  if (switchcount == 0 && dir == "asc") {
+			dir = "desc";
+			switching = true;
+		  }
+		}
+	  }
+	}
+	</script>
 </body>
 </html>
 
