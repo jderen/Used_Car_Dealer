@@ -44,49 +44,84 @@
 	</nav>
 	<!-- Navigation Bar -->
 
-	<input type="text" id="myBrand" onkeyup="getBrand()" placeholder="Wyszukaj markę">
-	<input type="text" id="myModel" onkeyup="getModel()" placeholder="Wyszukaj model">
-	<input type="text" id="myPrize" onkeyup="getPrize()" placeholder="Wyszukaj cenę">
+	<input type="text" id="myID" onkeyup="getID()" placeholder="ID">
+	<input type="text" id="myName" onkeyup="getName()" placeholder="Imię">
+	<input type="text" id="mySurname" onkeyup="getSurname()" placeholder="Nazwisko">
+	<input type="text" id="myNumber" onkeyup="getNumber()" placeholder="Numer Telefonu">
+	<input type="text" id="myStatus" onkeyup="getStatus()" placeholder="Status">
 
-
-	<table class="table" id="myTable">
+<div class="table-responsive">
+	<table class="table table-bordered table-hover" id="myTable"">
 	  <thead class="thead-light">
+	  	<thead>
 		<tr>
 	<th onclick="sortTable(0)">ID</th>
-	<th onclick="sortTable(1)">Marka</th>
-	<th onclick="sortTable(2)">Model</th>
-	<th onclick="sortTable(3)">Cena</th>
+	<th onclick="sortTable(1)">Imię</th>
+	<th onclick="sortTable(2)">Nazwisko</th>
+	<th onclick="sortTable(3)">Numer Telefonu</th>
+	<th onclick="sortTable(4)">Status</th>
+
 		</tr>
 	  </thead>
 	  <tbody>
 		<tr class="item">
 		  <td>1</td>
-		  <td>Mercedes</td>
-		  <td>eCorsa</td>
-		  <td>10500</td>
+		  <td>Piotr</td>
+		  <td>Nowak</td>
+		  <td>549203842</td>
+		  <td>Sprzedawca</td>
 		</tr>
 		<tr class="item">
-		  <td>2</th>
-		  <td>dOpel</td>
-		  <td>aorsa</td>
-		  <td>11500</td>
+		  <td>2</td>
+		  <td>Marek</td>
+		  <td>Kowalski</td>
+		  <td>430356321</td>
+		  <td>Kupiec</td>
 		</tr>
 		<tr class="item">
-		  <td>3</th>
-		  <td>eOpel</td>
-		  <td>borsa</td>
-		  <td>12000</td>
+		  <td>3</td>
+		  <td>Marcin</td>
+		  <td>Małysz</td>
+		  <td>325523859</td>
+		  <td>Sprzedawca</td>
 		</tr>
 	  </tbody>
 	</table>
+</div>
+
+
+<button type="button" class="btn btn-success">Dodaj</button>
+<button type="button" class="btn btn-warning">Edytuj</button>
+<button type="button" class="btn btn-danger">Usuń</button>
 
 
 
+
+
+<script type="text/javascript">
+	function getID() {
+	  var input, filter, table, tr, td, i;
+	  input = document.getElementById("myID");
+	  filter = input.value.toUpperCase();
+	  table = document.getElementById("myTable");
+	  tr = table.getElementsByTagName("tr");
+	  for (i = 0; i < tr.length; i++) {
+		td = tr[i].getElementsByTagName("td")[0];
+		if (td) {
+		  if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+			tr[i].style.display = "";
+		  } else {
+			tr[i].style.display = "none";
+		  }
+		}
+	  }
+	}
+	</script>
 
 	<script type="text/javascript">
-	function getBrand() {
+	function getName() {
 	  var input, filter, table, tr, td, i;
-	  input = document.getElementById("myBrand");
+	  input = document.getElementById("myName");
 	  filter = input.value.toUpperCase();
 	  table = document.getElementById("myTable");
 	  tr = table.getElementsByTagName("tr");
@@ -105,9 +140,9 @@
 
 
 	<script type="text/javascript">
-	function getModel() {
+	function getSurname() {
 	  var input, filter, table, tr, td, i;
-	  input = document.getElementById("myModel");
+	  input = document.getElementById("mySurname");
 	  filter = input.value.toUpperCase();
 	  table = document.getElementById("myTable");
 	  tr = table.getElementsByTagName("tr");
@@ -126,9 +161,9 @@
 
 
 	<script type="text/javascript">
-	function getPrize() {
+	function getNumber() {
 	  var input, filter, table, tr, td, i;
-	  input = document.getElementById("myPrize");
+	  input = document.getElementById("myNumber");
 	  filter = input.value.toUpperCase();
 	  table = document.getElementById("myTable");
 	  tr = table.getElementsByTagName("tr");
@@ -144,6 +179,28 @@
 	  }
 	}
 	</script>
+
+	<script type="text/javascript">
+	function getStatus() {
+	  var input, filter, table, tr, td, i;
+	  input = document.getElementById("myStatus");
+	  filter = input.value.toUpperCase();
+	  table = document.getElementById("myTable");
+	  tr = table.getElementsByTagName("tr");
+	  for (i = 0; i < tr.length; i++) {
+		td = tr[i].getElementsByTagName("td")[4];
+		if (td) {
+		  if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+			tr[i].style.display = "";
+		  } else {
+			tr[i].style.display = "none";
+		  }
+		}
+	  }
+	}
+	</script>
+
+
 
 	<script type="text/javascript">
 	function sortTable(n) {
