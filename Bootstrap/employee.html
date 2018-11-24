@@ -44,85 +44,90 @@
 	</nav>
 	<!-- Table -->
 
-	<input type="text" id="myID" onkeyup="getID()" placeholder="ID">
-	<input type="text" id="myBrand" onkeyup="getBrand()" placeholder="Imie">
-	<input type="text" id="myModel" onkeyup="getModel()" placeholder="Nazwisko">
-	<input type="text" id="myMileage" onkeyup="getMileage()" placeholder="Data Zatrudnienia">
-	<input type="text" id="myYear" onkeyup="getYear()" placeholder="Wynagrodzenie">
-	<input type="text" id="myEngineCapacity" onkeyup="getEngineCapacity()" placeholder="Pojemność Silnika">
-	<input type="text" id="myPower" onkeyup="getPower()" placeholder="Numer Telefonu">
-	<input type="text" id="myFuel" onkeyup="getFuel()" placeholder="Login">
-	<input type="text" id="myPrize" onkeyup="getPrize()" placeholder="Hasło">
-	<input type="text" id="myDate" onkeyup="getDate()" placeholder="Data Wystawienia">
-	<input type="text" id="mySeller" onkeyup="getSeller()" placeholder="ID sprzedającego">
-	<input type="text" id="myPhoto" onkeyup="getPhoto()" placeholder="Zdjęcie">
-	<input type="text" id="myAccident" onkeyup="getAccident()" placeholder="Bezwypadkowy">
+	<input type="text" id="myID" onkeyup="getID()" placeholder="ID Pracownika">
+	<input type="text" id="myName" onkeyup="getName()" placeholder="Imię">
+	<input type="text" id="mySurname" onkeyup="getSurname()" placeholder="Nazwisko">
+	<input type="text" id="myHireDate" onkeyup="getHireDate()" placeholder="Data Zatrudnienia">
+	<input type="text" id="mySalary" onkeyup="getSalary()" placeholder="Wynagrodzenie">
+	<input type="text" id="myNumber" onkeyup="getNumber()" placeholder="Numer Telefonu">
+	<input type="text" id="myLogin" onkeyup="getLogin()" placeholder="Login">
+	<input type="text" id="myPassword" onkeyup="getPassword()" placeholder="Hasło">
+	<input type="text" id="myPermission" onkeyup="getPermission()" placeholder="Uprawnienia">
+	<input type="text" id="myCity" onkeyup="getCity()" placeholder="Miejscowość">
+	<input type="text" id="myPost" onkeyup="getPost()" placeholder="Kod pocztowy">
+	<input type="text" id="myStreet" onkeyup="getStreet()" placeholder="Ulica">
+	<input type="text" id="myHomeNumber" onkeyup="getHomeNumber()" placeholder="Numer Domu">
+	<input type="text" id="myFlatNumber" onkeyup="getFlatNumber()" placeholder="Numer Mieszkania">
 
 <div class="table-responsive">
 	<table class="table table-bordered table-hover" id="myTable"">
 	  <thead class="thead-light">
 	  	<thead>
 		<tr>
-	<th onclick="sortTable(0)">ID</th>
-	<th onclick="sortTable(1)">Marka</th>
-	<th onclick="sortTable(2)">Model</th>
-	<th onclick="sortTable(3)">Przebieg</th>
-	<th onclick="sortTable(4)">Rok Produkcji</th>
-	<th onclick="sortTable(5)">Pojemność silnika</th>
-	<th onclick="sortTable(6)">Moc Silnika</th>
-	<th onclick="sortTable(7)">Rodzaj Paliwa</th>
-	<th onclick="sortTable(8)">Cena</th>
-	<th onclick="sortTable(9)">Data Wystawienia</th>
-	<th onclick="sortTable(10)">ID sprzedającego</th>
-	<th onclick="sortTable(11)">Zdjęcie</th>
-	<th onclick="sortTable(12)">Bezwypadkowy</th>
+	<th onclick="sortTable(0)">ID Pracownika</th>
+	<th onclick="sortTable(1)">Imię</th>
+	<th onclick="sortTable(2)">Nazwisko</th>
+	<th onclick="sortTable(3)">Data Zatrudnienia</th>
+	<th onclick="sortTable(4)">Wynagrodzenie</th>
+	<th onclick="sortTable(5)">Numer Telefonu</th>
+	<th onclick="sortTable(6)">Login</th>
+	<th onclick="sortTable(7)">Hasło</th>
+	<th onclick="sortTable(8)">Uprawnienia</th>
+	<th onclick="sortTable(9)">Miejscowość</th>
+	<th onclick="sortTable(10)">Kod Pocztowy</th>
+	<th onclick="sortTable(11)">Ulica</th>
+	<th onclick="sortTable(12)">Numer Domu</th>
+	<th onclick="sortTable(13)">Numer Mieszkania</th>
 		</tr>
 	  </thead>
 	  <tbody>
 		<tr class="item">
 		  <td>1</td>
-		  <td>Mercedes</td>
-		  <td>eCorsa</td>
-		  <td>105000</td>
-		  <td>1999</td>
-		  <td>2100</td>
-		  <td>160</td>
-		  <td>Benzyna</td>
-		  <td>10050</td>
+		  <td>Piotr</td>
+		  <td>Nowak</td>
 		  <td>10-10-2018</td>
-		  <td>1</td>
-		  <td>zdjecie</td>
-		  <td>Tak</td>
+		  <td>7422</td>
+		  <td>432432125</td>
+		  <td>pioter</td>
+		  <td>12345</td>
+		  <td>Pracownik</td>
+		  <td>Wrocław</td>
+		  <td>22-222</td>
+		  <td>ulicowa</td>
+		  <td>11</td>
+		  <td>3</td>
 		</tr>
 		<tr class="item">
 		  <td>2</td>
-		  <td>Opel</td>
-		  <td>aCorsa</td>
-		  <td>205000</td>
-		  <td>1995</td>
-		  <td>2300</td>
-		  <td>150</td>
-		  <td>LPG</td>
-		  <td>999999</td>
-		  <td>10-11-2018</td>
-		  <td>2</td>
-		  <td>zdjecie</td>
-		  <td>Nie</td>
+		  <td>Marcin</td>
+		  <td>Kowalski</td>
+		  <td>11-10-2018</td>
+		  <td>3283</td>
+		  <td>534439572</td>
+		  <td>marcin</td>
+		  <td>123456</td>
+		  <td>Pracownik</td>
+		  <td>Warszawa</td>
+		  <td>44-444</td>
+		  <td>szybka</td>
+		  <td>15</td>
+		  <td>4</td>
 		</tr>
 		<tr class="item">
 		  <td>3</td>
-		  <td>Subaru</td>
-		  <td>bCorsa</td>
-		  <td>342484</td>
-		  <td>2001</td>
-		  <td>1400</td>
-		  <td>70</td>
-		  <td>Diesel</td>
-		  <td>109900</td>
+		  <td>Marek</td>
+		  <td>Mostowiak</td>
 		  <td>10-10-2017</td>
-		  <td>3</td>
-		  <td>zdjecie</td>
-		  <td>Tak</td>
+		  <td>12040</td>
+		  <td>654321643</td>
+		  <td>marek</td>
+		  <td>123_45</td>
+		  <td>Administrator</td>
+		  <td>Wrocław</td>
+		  <td>33-333</td>
+		  <td>wolna</td>
+		  <td>20</td>
+		  <td>2</td>
 		</tr>
 	  </tbody>
 	</table>
@@ -158,9 +163,9 @@
 	</script>
 
 	<script type="text/javascript">
-	function getBrand() {
+	function getName(){
 	  var input, filter, table, tr, td, i;
-	  input = document.getElementById("myBrand");
+	  input = document.getElementById("myName");
 	  filter = input.value.toUpperCase();
 	  table = document.getElementById("myTable");
 	  tr = table.getElementsByTagName("tr");
@@ -179,9 +184,9 @@
 
 
 	<script type="text/javascript">
-	function getModel() {
+	function getSurname() {
 	  var input, filter, table, tr, td, i;
-	  input = document.getElementById("myModel");
+	  input = document.getElementById("mySurname");
 	  filter = input.value.toUpperCase();
 	  table = document.getElementById("myTable");
 	  tr = table.getElementsByTagName("tr");
@@ -200,9 +205,9 @@
 
 
 	<script type="text/javascript">
-	function getMileage() {
+	function getHireDate() {
 	  var input, filter, table, tr, td, i;
-	  input = document.getElementById("myMileage");
+	  input = document.getElementById("myHireDate");
 	  filter = input.value.toUpperCase();
 	  table = document.getElementById("myTable");
 	  tr = table.getElementsByTagName("tr");
@@ -219,10 +224,10 @@
 	}
 	</script>
 
-	<script type="text/javascript">
-	function getYear() {
+<script type="text/javascript">
+	function getSalary() {
 	  var input, filter, table, tr, td, i;
-	  input = document.getElementById("myYear");
+	  input = document.getElementById("mySalary");
 	  filter = input.value.toUpperCase();
 	  table = document.getElementById("myTable");
 	  tr = table.getElementsByTagName("tr");
@@ -241,9 +246,9 @@
 
 
 	<script type="text/javascript">
-	function getEngineCapacity() {
+	function getNumber() {
 	  var input, filter, table, tr, td, i;
-	  input = document.getElementById("myEngineCapacity");
+	  input = document.getElementById("myNumber");
 	  filter = input.value.toUpperCase();
 	  table = document.getElementById("myTable");
 	  tr = table.getElementsByTagName("tr");
@@ -262,9 +267,9 @@
 
 
 <script type="text/javascript">
-	function getPower() {
+	function getLogin() {
 	  var input, filter, table, tr, td, i;
-	  input = document.getElementById("myPower");
+	  input = document.getElementById("myLogin");
 	  filter = input.value.toUpperCase();
 	  table = document.getElementById("myTable");
 	  tr = table.getElementsByTagName("tr");
@@ -285,9 +290,9 @@
 
 
 		<script type="text/javascript">
-	function getFuel() {
+	function getPassword() {
 	  var input, filter, table, tr, td, i;
-	  input = document.getElementById("myFuel");
+	  input = document.getElementById("myPassword");
 	  filter = input.value.toUpperCase();
 	  table = document.getElementById("myTable");
 	  tr = table.getElementsByTagName("tr");
@@ -306,9 +311,9 @@
 
 
 	<script type="text/javascript">
-	function getPrize() {
+	function getPermission() {
 	  var input, filter, table, tr, td, i;
-	  input = document.getElementById("myPrize");
+	  input = document.getElementById("myPermission");
 	  filter = input.value.toUpperCase();
 	  table = document.getElementById("myTable");
 	  tr = table.getElementsByTagName("tr");
@@ -327,9 +332,9 @@
 
 
 	<script type="text/javascript">
-	function getDate() {
+	function getCity() {
 	  var input, filter, table, tr, td, i;
-	  input = document.getElementById("myDate");
+	  input = document.getElementById("myCity");
 	  filter = input.value.toUpperCase();
 	  table = document.getElementById("myTable");
 	  tr = table.getElementsByTagName("tr");
@@ -348,9 +353,9 @@
 
 
 	<script type="text/javascript">
-	function getSeller() {
+	function getPost() {
 	  var input, filter, table, tr, td, i;
-	  input = document.getElementById("mySeller");
+	  input = document.getElementById("myPost");
 	  filter = input.value.toUpperCase();
 	  table = document.getElementById("myTable");
 	  tr = table.getElementsByTagName("tr");
@@ -369,9 +374,9 @@
 
 
 	<script type="text/javascript">
-	function getPhoto() {
+	function getStreet() {
 	  var input, filter, table, tr, td, i;
-	  input = document.getElementById("myPhoto");
+	  input = document.getElementById("myStreet");
 	  filter = input.value.toUpperCase();
 	  table = document.getElementById("myTable");
 	  tr = table.getElementsByTagName("tr");
@@ -389,15 +394,37 @@
 	</script>
 
 
+
 	<script type="text/javascript">
-	function getAccident() {
+	function getHomeNumber() {
 	  var input, filter, table, tr, td, i;
-	  input = document.getElementById("myAccident");
+	  input = document.getElementById("myHomeNumber");
 	  filter = input.value.toUpperCase();
 	  table = document.getElementById("myTable");
 	  tr = table.getElementsByTagName("tr");
 	  for (i = 0; i < tr.length; i++) {
 		td = tr[i].getElementsByTagName("td")[12];
+		if (td) {
+		  if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+			tr[i].style.display = "";
+		  } else {
+			tr[i].style.display = "none";
+		  }
+		}
+	  }
+	}
+	</script>
+
+
+	<script type="text/javascript">
+	function getFlatNumber() {
+	  var input, filter, table, tr, td, i;
+	  input = document.getElementById("myFlatNumber");
+	  filter = input.value.toUpperCase();
+	  table = document.getElementById("myTable");
+	  tr = table.getElementsByTagName("tr");
+	  for (i = 0; i < tr.length; i++) {
+		td = tr[i].getElementsByTagName("td")[13];
 		if (td) {
 		  if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
 			tr[i].style.display = "";
