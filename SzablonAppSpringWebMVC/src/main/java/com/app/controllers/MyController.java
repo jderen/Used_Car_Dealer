@@ -24,17 +24,17 @@ public class MyController {
                 .accidents("bezwypadkowy")
                 .brand("Fiat")
                 .model("Uno")
-                .engine(new BigDecimal(1.2))
+                .engine(new BigDecimal(1))
                 .fuel("LPG")
                 .mileage(new Long("1000"))
                 .photo("bonzo.jpg")
                 .power(new Long("50"))
                 .price(new BigDecimal(55555))
                 .publishmentDate(new Date())
-                .seller("Twój stary pijany sprzedaje")
+                .seller("pan sprzedawca")
                 .year(new Long("2018"))
                 .build();
-        List<CarDao> cars = Arrays.asList(carDao);
+        List<CarDao> cars = Arrays.asList(carDao,carDao);
         model.addAttribute("cars", cars);
         return "index";
     }

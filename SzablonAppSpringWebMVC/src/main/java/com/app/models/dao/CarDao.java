@@ -25,4 +25,22 @@ public class CarDao {
     BigDecimal price;
     Date publishmentDate;
     String seller;
+
+    @Override
+    public String toString() {
+        return "CarDao{" +
+                "photo='" + photo + '\'' +
+                ", brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                ", accidents='" + accidents + '\'' +
+                ", mileage=" + mileage +
+                ", year=" + year +
+                ", engine=" + engine +
+                ", power=" + power +
+                ", fuel='" + fuel + '\'' +
+                ", price=" + price +
+                ", publishmentDate=" + publishmentDate +
+                ", seller='" + seller + '\'' +
+                '}';
+    }
 }
