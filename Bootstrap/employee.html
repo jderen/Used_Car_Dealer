@@ -14,7 +14,6 @@
 	<!-- Navigation Bar -->
 	<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="#"><img src="../../../../../../Bootstrap/img/eluwa.png"></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -43,294 +42,279 @@
 		</div>
 	</nav>
 	<!-- Table -->
-
-	<input type="text" id="myID" onkeyup="getID()" placeholder="ID Pracownika">
-	<input type="text" id="myName" onkeyup="getName()" placeholder="Imię">
-	<input type="text" id="mySurname" onkeyup="getSurname()" placeholder="Nazwisko">
-	<input type="text" id="myHireDate" onkeyup="getHireDate()" placeholder="Data Zatrudnienia">
-	<input type="text" id="mySalary" onkeyup="getSalary()" placeholder="Wynagrodzenie">
-	<input type="text" id="myNumber" onkeyup="getNumber()" placeholder="Numer Telefonu">
-	<input type="text" id="myLogin" onkeyup="getLogin()" placeholder="Login">
-	<input type="text" id="myPassword" onkeyup="getPassword()" placeholder="Hasło">
-	<input type="text" id="myPermission" onkeyup="getPermission()" placeholder="Uprawnienia">
-	<input type="text" id="myCity" onkeyup="getCity()" placeholder="Miejscowość">
-	<input type="text" id="myPost" onkeyup="getPost()" placeholder="Kod pocztowy">
-	<input type="text" id="myStreet" onkeyup="getStreet()" placeholder="Ulica">
-	<input type="text" id="myHomeNumber" onkeyup="getHomeNumber()" placeholder="Numer Domu">
-	<input type="text" id="myFlatNumber" onkeyup="getFlatNumber()" placeholder="Numer Mieszkania">
-
-<div class="table-responsive">
-	<table class="table table-bordered table-hover" id="myTable"">
-	  <thead class="thead-light">
-	  	<thead>
-		<tr>
-	<th onclick="sortTable(0)">ID Pracownika</th>
-	<th onclick="sortTable(1)">Imię</th>
-	<th onclick="sortTable(2)">Nazwisko</th>
-	<th onclick="sortTable(3)">Data Zatrudnienia</th>
-	<th onclick="sortTable(4)">Wynagrodzenie</th>
-	<th onclick="sortTable(5)">Numer Telefonu</th>
-	<th onclick="sortTable(6)">Login</th>
-	<th onclick="sortTable(7)">Hasło</th>
-	<th onclick="sortTable(8)">Uprawnienia</th>
-	<th onclick="sortTable(9)">Miejscowość</th>
-	<th onclick="sortTable(10)">Kod Pocztowy</th>
-	<th onclick="sortTable(11)">Ulica</th>
-	<th onclick="sortTable(12)">Numer Domu</th>
-	<th onclick="sortTable(13)">Numer Mieszkania</th>
-		</tr>
-	  </thead>
-	  <tbody>
-		<tr class="item">
-		  <td>1</td>
-		  <td>Piotr</td>
-		  <td>Nowak</td>
-		  <td>10-10-2018</td>
-		  <td>7422</td>
-		  <td>432432125</td>
-		  <td>pioter</td>
-		  <td>12345</td>
-		  <td>Pracownik</td>
-		  <td>Wrocław</td>
-		  <td>22-222</td>
-		  <td>ulicowa</td>
-		  <td>11</td>
-		  <td>3</td>
-		</tr>
-		<tr class="item">
-		  <td>2</td>
-		  <td>Marcin</td>
-		  <td>Kowalski</td>
-		  <td>11-10-2018</td>
-		  <td>3283</td>
-		  <td>534439572</td>
-		  <td>marcin</td>
-		  <td>123456</td>
-		  <td>Pracownik</td>
-		  <td>Warszawa</td>
-		  <td>44-444</td>
-		  <td>szybka</td>
-		  <td>15</td>
-		  <td>4</td>
-		</tr>
-		<tr class="item">
-		  <td>3</td>
-		  <td>Marek</td>
-		  <td>Mostowiak</td>
-		  <td>10-10-2017</td>
-		  <td>12040</td>
-		  <td>654321643</td>
-		  <td>marek</td>
-		  <td>123_45</td>
-		  <td>Administrator</td>
-		  <td>Wrocław</td>
-		  <td>33-333</td>
-		  <td>wolna</td>
-		  <td>20</td>
-		  <td>2</td>
-		</tr>
-	  </tbody>
-	</table>
-</div>
-
-
-<!-- Button "Dodaj"-->
-<div class="container">
-	<div class ="row">
-		<div class="col-md-8 offset-md-5">
-			<button class="btn btn-success" data-target="#addModal" data-toggle="modal">Dodaj</button>
-			<div class="modal" id="addModal" tabindex="-1">
-				<div class="modal-dialog modal-sm">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button class="close" data-dismiss="modal">&times;</button>
-						</div>
-						<div class="modal-body">
-							<form>
-								<div class="form-group">
-									<label for="inputName">Name</label>
-									<input class="form-control" type="text" id="Name"></input>
-								</div>
-								<div class="form-group">
-									<label for="inputSurname">Nazwisko</label>
-									<input class="form-control" type="text" id="Surname"></input>
-								</div>
-								<div class="form-group">
-									<label for="inputHireDate">Data Zatrudnienia</label>
-									<input class="form-control" type="text" id="HireDate"></input>
-								</div>
-								<div class="form-group">
-									<label for="inputSalary">Wynagrodzenie</label>
-									<input class="form-control" type="text" id="Salary"></input>
-								</div>
-								<div class="form-group">
-									<label for="inputNumber">Numer Telefonu</label>
-									<input class="form-control" type="text" id="Numer"></input>
-								</div>
-								<div class="form-group">
-									<label for="inputLogin">Login</label>
-									<input class="form-control" type="text" id="Login"></input>
-								</div>
-								<div class="form-group">
-									<label for="inputPassword">Hasło</label>
-									<input class="form-control" type="text" id="Password"></input>
-								</div>
-								<div class="form-group">
-									<label for="inputPermission">Uprawnienia</label>
-									<input class="form-control" type="text" id="Permission"></input>
-								</div>
-								<div class="form-group">
-									<label for="inputCity">Miejscowość</label>
-									<input class="form-control" type="text" id="City"></input>
-								</div>
-								<div class="form-group">
-									<label for="inputPost">Kod Pocztowy</label>
-									<input class="form-control" type="text" id="Post"></input>
-								</div>
-								<div class="form-group">
-									<label for="inputStreet">Ulica</label>
-									<input class="form-control" type="text" id="Street"></input>
-								</div>
-								<div class="form-group">
-									<label for="inputHomeNumber">Numer Domu</label>
-									<input class="form-control" type="text" id="HomeNumber"></input>
-								</div>
-								<div class="form-group">
-									<label for="inputFlatNumber">Numer Mieszkania</label>
-									<input class="form-control" type="text" id="FlatNumber"></input>
-								</div>
-							</form>
-						</div>
-						<div class="modal-footer">
-							<button class="btn btn-primary" data-dismiss="modal">Anuluj</button>
-							<button class="btn btn-primary">Potwierdz</button>
+	<div class="container">
+		<div class ="row">
+			<div class="col-md-10 offset-md-1">
+				<input type="text" id="myID" onkeyup="getID()" placeholder="ID Pracownika">
+				<input type="text" id="myName" onkeyup="getName()" placeholder="Imię">
+				<input type="text" id="mySurname" onkeyup="getSurname()" placeholder="Nazwisko">
+				<input type="text" id="myHireDate" onkeyup="getHireDate()" placeholder="Data Zatrudnienia">
+				<input type="text" id="mySalary" onkeyup="getSalary()" placeholder="Wynagrodzenie">
+				<input type="text" id="myNumber" onkeyup="getNumber()" placeholder="Numer Telefonu">
+				<input type="text" id="myLogin" onkeyup="getLogin()" placeholder="Login">
+				<input type="text" id="myPassword" onkeyup="getPassword()" placeholder="Hasło">
+				<input type="text" id="myPermission" onkeyup="getPermission()" placeholder="Uprawnienia">
+				<input type="text" id="myCity" onkeyup="getCity()" placeholder="Miejscowość">
+				<input type="text" id="myPost" onkeyup="getPost()" placeholder="Kod pocztowy">
+				<input type="text" id="myStreet" onkeyup="getStreet()" placeholder="Ulica">
+				<input type="text" id="myHomeNumber" onkeyup="getHomeNumber()" placeholder="Numer Domu">
+				<input type="text" id="myFlatNumber" onkeyup="getFlatNumber()" placeholder="Numer Mieszkania">
+			</div>
+		</div>
+	</div>
+	</br>
+	
+	
+				<div class="table-responsive">
+					<table class="table table-bordered table-hover" id="myTable"">
+					  <thead class="thead-light">
+						<thead>
+						<tr>
+							<th onclick="sortTable(0)">ID Pracownika</th>
+							<th onclick="sortTable(1)">Imię</th>
+							<th onclick="sortTable(2)">Nazwisko</th>
+							<th onclick="sortTable(3)">Data Zatrudnienia</th>
+							<th onclick="sortTable(4)">Wynagrodzenie</th>
+							<th onclick="sortTable(5)">Numer Telefonu</th>
+							<th onclick="sortTable(6)">Login</th>
+							<th onclick="sortTable(7)">Hasło</th>
+							<th onclick="sortTable(8)">Uprawnienia</th>
+							<th onclick="sortTable(9)">Miejscowość</th>
+							<th onclick="sortTable(10)">Kod Pocztowy</th>
+							<th onclick="sortTable(11)">Ulica</th>
+							<th onclick="sortTable(12)">Numer Domu</th>
+							<th onclick="sortTable(13)">Numer Mieszkania</th>
+						</tr>
+					  </thead>
+					  <tbody>
+						<tr class="item">
+						  <td>1</td>
+						  <td>Piotr</td>
+						  <td>Nowak</td>
+						  <td>10-10-2018</td>
+						  <td>7422</td>
+						  <td>432432125</td>
+						  <td>pioter</td>
+						  <td>12345</td>
+						  <td>Pracownik</td>
+						  <td>Wrocław</td>
+						  <td>22-222</td>
+						  <td>ulicowa</td>
+						  <td>11</td>
+						  <td>3</td>
+						</tr>
+						<tr class="item">
+						  <td>2</td>
+						  <td>Marcin</td>
+						  <td>Kowalski</td>
+						  <td>11-10-2018</td>
+						  <td>3283</td>
+						  <td>534439572</td>
+						  <td>marcin</td>
+						  <td>123456</td>
+						  <td>Pracownik</td>
+						  <td>Warszawa</td>
+						  <td>44-444</td>
+						  <td>szybka</td>
+						  <td>15</td>
+						  <td>4</td>
+						</tr>
+						<tr class="item">
+						  <td>3</td>
+						  <td>Marek</td>
+						  <td>Mostowiak</td>
+						  <td>10-10-2017</td>
+						  <td>12040</td>
+						  <td>654321643</td>
+						  <td>marek</td>
+						  <td>123_45</td>
+						  <td>Administrator</td>
+						  <td>Wrocław</td>
+						  <td>33-333</td>
+						  <td>wolna</td>
+						  <td>20</td>
+						  <td>2</td>
+						</tr>
+					  </tbody>
+					</table>
+				</div>
+	
+	<div class="container">
+		<div class ="row">
+			<div class="col-md-2 offset-md-5">
+			
+				<div class="btn-group" role="group" aria-label="Basic example">
+					<button class="btn btn-success" data-target="#addModal" data-toggle="modal">Dodaj</button>
+					<button class="btn btn-warning" data-target="#editModal" data-toggle="modal">Edytuj</button>
+						<button class="btn btn-danger" data-target="#deleteModal" data-toggle="modal">Usuń</button>
+				</div>
+				
+				<div class="modal" id="addModal" tabindex="-1">
+					<div class="modal-dialog modal-sm">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button class="close" data-dismiss="modal">&times;</button>
+							</div>
+							<div class="modal-body">
+								<form>
+									<div class="form-group">
+										<label for="inputName">Name</label>
+										<input class="form-control" type="text" id="Name"></input>
+									</div>
+									<div class="form-group">
+										<label for="inputSurname">Nazwisko</label>
+										<input class="form-control" type="text" id="Surname"></input>
+									</div>
+									<div class="form-group">
+										<label for="inputHireDate">Data Zatrudnienia</label>
+										<input class="form-control" type="text" id="HireDate"></input>
+									</div>
+									<div class="form-group">
+										<label for="inputSalary">Wynagrodzenie</label>
+										<input class="form-control" type="text" id="Salary"></input>
+									</div>
+									<div class="form-group">
+										<label for="inputNumber">Numer Telefonu</label>
+										<input class="form-control" type="text" id="Numer"></input>
+									</div>
+									<div class="form-group">
+										<label for="inputLogin">Login</label>
+										<input class="form-control" type="text" id="Login"></input>
+									</div>
+									<div class="form-group">
+										<label for="inputPassword">Hasło</label>
+										<input class="form-control" type="text" id="Password"></input>
+									</div>
+									<div class="form-group">
+										<label for="inputPermission">Uprawnienia</label>
+										<input class="form-control" type="text" id="Permission"></input>
+									</div>
+									<div class="form-group">
+										<label for="inputCity">Miejscowość</label>
+										<input class="form-control" type="text" id="City"></input>
+									</div>
+									<div class="form-group">
+										<label for="inputPost">Kod Pocztowy</label>
+										<input class="form-control" type="text" id="Post"></input>
+									</div>
+									<div class="form-group">
+										<label for="inputStreet">Ulica</label>
+										<input class="form-control" type="text" id="Street"></input>
+									</div>
+									<div class="form-group">
+										<label for="inputHomeNumber">Numer Domu</label>
+										<input class="form-control" type="text" id="HomeNumber"></input>
+									</div>
+									<div class="form-group">
+										<label for="inputFlatNumber">Numer Mieszkania</label>
+										<input class="form-control" type="text" id="FlatNumber"></input>
+									</div>
+								</form>
+							</div>
+							<div class="modal-footer">
+								<button class="btn btn-primary" data-dismiss="modal">Anuluj</button>
+								<button class="btn btn-primary">Potwierdz</button>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>	
-
-		</div>
-	</div>
-</div>
-
-
-<!-- Button "Edytuj"-->
-<div class="container">
-	<div class ="row">
-		<div class="col-md-8 offset-md-5">
-			<button class="btn btn-warning" data-target="#editModal" data-toggle="modal">Edytuj</button>
-			<div class="modal" id="editModal" tabindex="-1">
-				<div class="modal-dialog modal-sm">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button class="close" data-dismiss="modal">&times;</button>
-						</div>
-						<div class="modal-body">
-							<form>
-								<div class="form-group">
-									<label for="inputID">ID Pracownika</label>
-									<input class="form-control" type="text" id="ID"></input>
-								</div>
-								<div class="form-group">
-									<label for="inputName">Name</label>
-									<input class="form-control" type="text" id="Name"></input>
-								</div>
-								<div class="form-group">
-									<label for="inputSurname">Nazwisko</label>
-									<input class="form-control" type="text" id="Surname"></input>
-								</div>
-								<div class="form-group">
-									<label for="inputHireDate">Data Zatrudnienia</label>
-									<input class="form-control" type="text" id="HireDate"></input>
-								</div>
-								<div class="form-group">
-									<label for="inputSalary">Wynagrodzenie</label>
-									<input class="form-control" type="text" id="Salary"></input>
-								</div>
-								<div class="form-group">
-									<label for="inputNumber">Numer Telefonu</label>
-									<input class="form-control" type="text" id="Numer"></input>
-								</div>
-								<div class="form-group">
-									<label for="inputLogin">Login</label>
-									<input class="form-control" type="text" id="Login"></input>
-								</div>
-								<div class="form-group">
-									<label for="inputPassword">Hasło</label>
-									<input class="form-control" type="text" id="Password"></input>
-								</div>
-								<div class="form-group">
-									<label for="inputPermission">Uprawnienia</label>
-									<input class="form-control" type="text" id="Permission"></input>
-								</div>
-								<div class="form-group">
-									<label for="inputCity">Miejscowość</label>
-									<input class="form-control" type="text" id="City"></input>
-								</div>
-								<div class="form-group">
-									<label for="inputPost">Kod Pocztowy</label>
-									<input class="form-control" type="text" id="Post"></input>
-								</div>
-								<div class="form-group">
-									<label for="inputStreet">Ulica</label>
-									<input class="form-control" type="text" id="Street"></input>
-								</div>
-								<div class="form-group">
-									<label for="inputHomeNumber">Numer Domu</label>
-									<input class="form-control" type="text" id="HomeNumber"></input>
-								</div>
-								<div class="form-group">
-									<label for="inputFlatNumber">Numer Mieszkania</label>
-									<input class="form-control" type="text" id="FlatNumber"></input>
-								</div>
-							</form>
-						</div>
-						<div class="modal-footer">
-							<button class="btn btn-primary" data-dismiss="modal">Anuluj</button>
-							<button class="btn btn-primary">Potwierdz</button>
+				<div class="modal" id="editModal" tabindex="-1">
+					<div class="modal-dialog modal-sm">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button class="close" data-dismiss="modal">&times;</button>
+							</div>
+							<div class="modal-body">
+								<form>
+									<div class="form-group">
+										<label for="inputID">ID Pracownika</label>
+										<input class="form-control" type="text" id="ID"></input>
+									</div>
+									<div class="form-group">
+										<label for="inputName">Name</label>
+										<input class="form-control" type="text" id="Name"></input>
+									</div>
+									<div class="form-group">
+										<label for="inputSurname">Nazwisko</label>
+										<input class="form-control" type="text" id="Surname"></input>
+									</div>
+									<div class="form-group">
+										<label for="inputHireDate">Data Zatrudnienia</label>
+										<input class="form-control" type="text" id="HireDate"></input>
+									</div>
+									<div class="form-group">
+										<label for="inputSalary">Wynagrodzenie</label>
+										<input class="form-control" type="text" id="Salary"></input>
+									</div>
+									<div class="form-group">
+										<label for="inputNumber">Numer Telefonu</label>
+										<input class="form-control" type="text" id="Numer"></input>
+									</div>
+									<div class="form-group">
+										<label for="inputLogin">Login</label>
+										<input class="form-control" type="text" id="Login"></input>
+									</div>
+									<div class="form-group">
+										<label for="inputPassword">Hasło</label>
+										<input class="form-control" type="text" id="Password"></input>
+									</div>
+									<div class="form-group">
+										<label for="inputPermission">Uprawnienia</label>
+										<input class="form-control" type="text" id="Permission"></input>
+									</div>
+									<div class="form-group">
+										<label for="inputCity">Miejscowość</label>
+										<input class="form-control" type="text" id="City"></input>
+									</div>
+									<div class="form-group">
+										<label for="inputPost">Kod Pocztowy</label>
+										<input class="form-control" type="text" id="Post"></input>
+									</div>
+									<div class="form-group">
+										<label for="inputStreet">Ulica</label>
+										<input class="form-control" type="text" id="Street"></input>
+									</div>
+									<div class="form-group">
+										<label for="inputHomeNumber">Numer Domu</label>
+										<input class="form-control" type="text" id="HomeNumber"></input>
+									</div>
+									<div class="form-group">
+										<label for="inputFlatNumber">Numer Mieszkania</label>
+										<input class="form-control" type="text" id="FlatNumber"></input>
+									</div>
+								</form>
+							</div>
+							<div class="modal-footer">
+								<button class="btn btn-primary" data-dismiss="modal">Anuluj</button>
+								<button class="btn btn-primary">Potwierdz</button>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>	
-
-		</div>
-	</div>
-</div>
-
-
-<!-- Button "Usuń"-->
-<div class="container">
-	<div class ="row">
-		<div class="col-md-8 offset-md-5">
-			<button class="btn btn-danger" data-target="#deleteModal" data-toggle="modal">Usuń</button>
-			<div class="modal" id="deleteModal" tabindex="-1">
-				<div class="modal-dialog modal-sm">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button class="close" data-dismiss="modal">&times;</button>
-						</div>
-						<div class="modal-body">
-							<form>
-								<div class="form-group">
-									<label for="inputID">ID Pracownika</label>
-									<input class="form-control" type="text" id="ID"></input>
-								</div>
-							</form>
-						</div>
-						<div class="modal-footer">
-							<button class="btn btn-primary" data-dismiss="modal">Anuluj</button>
-							<button class="btn btn-primary">Potwierdz</button>
+				<div class="modal" id="deleteModal" tabindex="-1">
+					<div class="modal-dialog modal-sm">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button class="close" data-dismiss="modal">&times;</button>
+							</div>
+							<div class="modal-body">
+								<form>
+									<div class="form-group">
+										<label for="inputID">ID Pracownika</label>
+										<input class="form-control" type="text" id="ID"></input>
+									</div>
+								</form>
+							</div>
+							<div class="modal-footer">
+								<button class="btn btn-primary" data-dismiss="modal">Anuluj</button>
+								<button class="btn btn-primary">Potwierdz</button>
+							</div>
 						</div>
 					</div>
-				</div>
-			</div>	
-
+				</div>	
+			</div>
 		</div>
 	</div>
-</div>
-
-
-
 
 
 
