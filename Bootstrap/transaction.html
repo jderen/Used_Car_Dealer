@@ -42,65 +42,82 @@
 			</div>
 		</div>
 	</nav>
+	</br>
 	<!-- Table -->
 
+	<div class="container">
+		<div class ="row">
+			<div class="col-md-7 offset-md-3">
+				<input type="text" id="myID" onkeyup="getID()" placeholder="ID">
+				<input type="text" id="myAmount" onkeyup="getAmount()" placeholder="Kwota">
+				<input type="text" id="myDate" onkeyup="getDate()" placeholder="Data transakcji">
+				<input type="text" id="myBuyer" onkeyup="getBuyer()" placeholder="ID Kupca">
+				<input type="text" id="myWorker" onkeyup="getWorker()" placeholder="ID Pracownika">
+				<input type="text" id="myCar" onkeyup="getCar()" placeholder="ID pojazdu">
+			</div>
+		</div>
+	</div>	
+	</br>
+	
+	<div class="container">
+		<div class ="row">
+			<div class="col-md-10 offset-md-1">
+				<div class="table-responsive">
+					<table class="table table-bordered table-hover" id="myTable"">
+					  <thead class="thead-light">
+						<thead>
+						<tr>
+					<th onclick="sortTable(0)">ID</th>
+					<th onclick="sortTable(1)">Kwota</th>
+					<th onclick="sortTable(2)">Data transakcji</th>
+					<th onclick="sortTable(3)">ID Kupca</th>
+					<th onclick="sortTable(4)">ID pracownika</th>
+					<th onclick="sortTable(5)">ID pojazdu</th>
+						</tr>
+					  </thead>
+					  <tbody>
+						<tr class="item">
+						  <td>1</td>
+						  <td>10500</td>
+						  <td>10-10-2018</td>
+						  <td>1</td>
+						  <td>1</td>
+						  <td>1</td>
+						</tr>
+						<tr class="item">
+						  <td>2</td>
+						  <td>20493</td>
+						  <td>10-11-2018</td>
+						  <td>1</td>
+						  <td>3</td>
+						  <td>3</td>
+						</tr>
+						<tr class="item">
+						  <td>3</td>
+						  <td>382137</td>
+						  <td>10-10-2017</td>
+						  <td>2</td>
+						  <td>2</td>
+						  <td>2</td>
+						</tr>
+					  </tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>	
+	
 
-	<input type="text" id="myID" onkeyup="getID()" placeholder="ID">
-	<input type="text" id="myAmount" onkeyup="getAmount()" placeholder="Kwota">
-	<input type="text" id="myDate" onkeyup="getDate()" placeholder="Data transakcji">
-	<input type="text" id="myBuyer" onkeyup="getBuyer()" placeholder="ID Kupca">
-	<input type="text" id="myWorker" onkeyup="getWorker()" placeholder="ID Pracownika">
-	<input type="text" id="myCar" onkeyup="getCar()" placeholder="ID pojazdu">
-
-<div class="table-responsive">
-	<table class="table table-bordered table-hover" id="myTable"">
-	  <thead class="thead-light">
-	  	<thead>
-		<tr>
-	<th onclick="sortTable(0)">ID</th>
-	<th onclick="sortTable(1)">Kwota</th>
-	<th onclick="sortTable(2)">Data transakcji</th>
-	<th onclick="sortTable(3)">ID Kupca</th>
-	<th onclick="sortTable(4)">ID pracownika</th>
-	<th onclick="sortTable(5)">ID pojazdu</th>
-		</tr>
-	  </thead>
-	  <tbody>
-		<tr class="item">
-		  <td>1</td>
-		  <td>10500</td>
-		  <td>10-10-2018</td>
-		  <td>1</td>
-		  <td>1</td>
-		  <td>1</td>
-		</tr>
-		<tr class="item">
-		  <td>2</td>
-		  <td>20493</td>
-		  <td>10-11-2018</td>
-		  <td>1</td>
-		  <td>3</td>
-		  <td>3</td>
-		</tr>
-		<tr class="item">
-		  <td>3</td>
-		  <td>382137</td>
-		  <td>10-10-2017</td>
-		  <td>2</td>
-		  <td>2</td>
-		  <td>2</td>
-		</tr>
-	  </tbody>
-	</table>
-</div>
-
-
-<!-- Button "Dodaj"-->
 <div class="container">
-	<div class ="row">
-		<div class="col-md-8 offset-md-5">
-			<button class="btn btn-success" data-target="#addModal" data-toggle="modal">Dodaj</button>
-			<div class="modal" id="addModal" tabindex="-1">
+		<div class ="row">
+			<div class="col-md-2 offset-md-5">
+				<div class="btn-group" role="group" aria-label="Basic example">
+					<button class="btn btn-success" data-target="#addModal" data-toggle="modal">Dodaj</button>
+					<button class="btn btn-warning" data-target="#editModal" data-toggle="modal">Edytuj</button>
+					<button class="btn btn-danger" data-target="#deleteModal" data-toggle="modal">Usuń</button>
+				</div>
+				<div class="modal" id="addModal" tabindex="-1">
+
 				<div class="modal-dialog modal-sm">
 					<div class="modal-content">
 						<div class="modal-header">
@@ -137,18 +154,7 @@
 					</div>
 				</div>
 			</div>	
-
-		</div>
-	</div>
-</div>
-
-
-<!-- Button "Edytuj"-->
-<div class="container">
-	<div class ="row">
-		<div class="col-md-8 offset-md-5">
-			<button class="btn btn-warning" data-target="#editModal" data-toggle="modal">Edytuj</button>
-			<div class="modal" id="editModal" tabindex="-1">
+				<div class="modal" id="editModal" tabindex="-1">
 				<div class="modal-dialog modal-sm">
 					<div class="modal-content">
 						<div class="modal-header">
@@ -189,18 +195,7 @@
 					</div>
 				</div>
 			</div>	
-
-		</div>
-	</div>
-</div>
-
-
-<!-- Button "Usuń"-->
-<div class="container">
-	<div class ="row">
-		<div class="col-md-8 offset-md-5">
-			<button class="btn btn-danger" data-target="#deleteModal" data-toggle="modal">Usuń</button>
-			<div class="modal" id="deleteModal" tabindex="-1">
+				<div class="modal" id="deleteModal" tabindex="-1">
 				<div class="modal-dialog modal-sm">
 					<div class="modal-content">
 						<div class="modal-header">
@@ -220,16 +215,10 @@
 						</div>
 					</div>
 				</div>
-			</div>	
-
+			</div>
 		</div>
 	</div>
 </div>
-
-
-
-
-
 
 <script type="text/javascript">
 	function getID() {
