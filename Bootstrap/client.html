@@ -42,59 +42,77 @@
 			</div>
 		</div>
 	</nav>
+	</br>
 	<!-- Navigation Bar -->
+	<div class="container">
+		<div class ="row">
+			<div class="col-md-10 offset-md-1">
+				<input type="text" id="myID" onkeyup="getID()" placeholder="ID">
+				<input type="text" id="myName" onkeyup="getName()" placeholder="Imię">
+				<input type="text" id="mySurname" onkeyup="getSurname()" placeholder="Nazwisko">
+				<input type="text" id="myNumber" onkeyup="getNumber()" placeholder="Numer Telefonu">
+				<input type="text" id="myStatus" onkeyup="getStatus()" placeholder="Status">
+			</div>
+		</div>
+	</div>
+	</br>
+	
+	<div class="container">
+		<div class ="row">
+			<div class="col-md-10 offset-md-1">
+				<div class="table-responsive">
+					<table class="table table-bordered table-hover" id="myTable"">
+					  <thead class="thead-light">
+						<thead>
+						<tr>
+					<th onclick="sortTable(0)">ID</th>
+					<th onclick="sortTable(1)">Imię</th>
+					<th onclick="sortTable(2)">Nazwisko</th>
+					<th onclick="sortTable(3)">Numer Telefonu</th>
+					<th onclick="sortTable(4)">Status</th>
 
-	<input type="text" id="myID" onkeyup="getID()" placeholder="ID">
-	<input type="text" id="myName" onkeyup="getName()" placeholder="Imię">
-	<input type="text" id="mySurname" onkeyup="getSurname()" placeholder="Nazwisko">
-	<input type="text" id="myNumber" onkeyup="getNumber()" placeholder="Numer Telefonu">
-	<input type="text" id="myStatus" onkeyup="getStatus()" placeholder="Status">
-
-<div class="table-responsive">
-	<table class="table table-bordered table-hover" id="myTable"">
-	  <thead class="thead-light">
-	  	<thead>
-		<tr>
-	<th onclick="sortTable(0)">ID</th>
-	<th onclick="sortTable(1)">Imię</th>
-	<th onclick="sortTable(2)">Nazwisko</th>
-	<th onclick="sortTable(3)">Numer Telefonu</th>
-	<th onclick="sortTable(4)">Status</th>
-
-		</tr>
-	  </thead>
-	  <tbody>
-		<tr class="item">
-		  <td>1</td>
-		  <td>Piotr</td>
-		  <td>Nowak</td>
-		  <td>549203842</td>
-		  <td>Sprzedawca</td>
-		</tr>
-		<tr class="item">
-		  <td>2</td>
-		  <td>Marek</td>
-		  <td>Kowalski</td>
-		  <td>430356321</td>
-		  <td>Kupiec</td>
-		</tr>
-		<tr class="item">
-		  <td>3</td>
-		  <td>Marcin</td>
-		  <td>Małysz</td>
-		  <td>325523859</td>
-		  <td>Sprzedawca</td>
-		</tr>
-	  </tbody>
-	</table>
-</div>
+						</tr>
+					  </thead>
+					  <tbody>
+						<tr class="item">
+						  <td>1</td>
+						  <td>Piotr</td>
+						  <td>Nowak</td>
+						  <td>549203842</td>
+						  <td>Sprzedawca</td>
+						</tr>
+						<tr class="item">
+						  <td>2</td>
+						  <td>Marek</td>
+						  <td>Kowalski</td>
+						  <td>430356321</td>
+						  <td>Kupiec</td>
+						</tr>
+						<tr class="item">
+						  <td>3</td>
+						  <td>Marcin</td>
+						  <td>Małysz</td>
+						  <td>325523859</td>
+						  <td>Sprzedawca</td>
+						</tr>
+					  </tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
 
 
-<!-- Button "Dodaj"-->
+
 <div class="container">
 	<div class ="row">
-		<div class="col-md-8 offset-md-5">
-			<button class="btn btn-success" data-target="#addModal" data-toggle="modal">Dodaj</button>
+		<div class="col-md-2 offset-md-5">
+			<div class="btn-group" role="group" aria-label="Basic example">
+				<button class="btn btn-success" data-target="#addModal" data-toggle="modal">Dodaj</button>
+				<button class="btn btn-warning" data-target="#editModal" data-toggle="modal">Edytuj</button>
+				<button class="btn btn-danger" data-target="#deleteModal" data-toggle="modal">Usuń</button>
+			</div>
+			
 			<div class="modal" id="addModal" tabindex="-1">
 				<div class="modal-dialog modal-sm">
 					<div class="modal-content">
@@ -104,20 +122,56 @@
 						<div class="modal-body">
 							<form>
 								<div class="form-group">
-									<label for="inputName">Imię</label>
-									<input class="form-control" type="text" id="Name"></input>
+									<label for="inputID">ID Pojazdu</label>
+									<input class="form-control" type="text" id="ID"></input>
 								</div>
 								<div class="form-group">
-									<label for="inputSurname">Nazwisko</label>
-									<input class="form-control" type="text" id="Surname"></input>
+									<label for="inputBrand">Marka</label>
+									<input class="form-control" type="text" id="Brand"></input>
 								</div>
 								<div class="form-group">
-									<label for="inputNumber">Numer Telefonu</label>
-									<input class="form-control" type="text" id="Number"></input>
+									<label for="inputModel">Model</label>
+									<input class="form-control" type="text" id="Model"></input>
 								</div>
 								<div class="form-group">
-									<label for="inputStatus">Status</label>
-									<input class="form-control" type="text" id="Status"></input>
+									<label for="inputMileage">Przebieg</label>
+									<input class="form-control" type="text" id="Mileage"></input>
+								</div>
+								<div class="form-group">
+									<label for="inputYear">Rok Produkcji</label>
+									<input class="form-control" type="text" id="Year"></input>
+								</div>
+								<div class="form-group">
+									<label for="inputEngineCapacity">Pojemność Silnika</label>
+									<input class="form-control" type="text" id="EngineCapacity"></input>
+								</div>
+								<div class="form-group">
+									<label for="inputPower">Moc Silnika</label>
+									<input class="form-control" type="text" id="Power"></input>
+								</div>
+								<div class="form-group">
+									<label for="inputFuel">Rodzaj Paliwa</label>
+									<input class="form-control" type="text" id="Fuel"></input>
+								</div>
+								<div class="form-group">
+									<label for="inputPrize">Cena</label>
+									<input class="form-control" type="text" id="Prize"></input>
+								</div>
+								<div class="form-group">
+									<label for="inputDate">Data Wystawienia</label>
+									<input class="form-control" type="text" id="Date"></input>
+								</div>
+								<div class="form-group">
+									<label for="inputSeller">ID sprzedającego</label>
+									<input class="form-control" type="text" id="Seller"></input>
+								</div>
+								<div class="form-group">
+									<label for="inputPhoto">Zdjęcie</label>
+									<input class="form-control" type="text" id="Photo"></input>
+								</div>
+								<div class="form-group">
+									<label for="inputAccident">Bezwypadkowy</label>
+									<input class="form-control" type="text" id="Accident"></input>
 								</div>
 							</form>
 						</div>
@@ -127,95 +181,12 @@
 						</div>
 					</div>
 				</div>
-			</div>	
-
-		</div>
-	</div>
-</div>
-
-
-<!-- Button "Edytuj"-->
-<div class="container">
-	<div class ="row">
-		<div class="col-md-8 offset-md-5">
-			<button class="btn btn-warning" data-target="#editModal" data-toggle="modal">Edytuj</button>
+			</div>
 			<div class="modal" id="editModal" tabindex="-1">
-				<div class="modal-dialog modal-sm">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button class="close" data-dismiss="modal">&times;</button>
-						</div>
-						<div class="modal-body">
-							<form>
-								<div class="form-group">
-									<label for="inputID">ID Klienta</label>
-									<input class="form-control" type="text" id="ID"></input>
-								</div>
-								<div class="form-group">
-									<label for="inputName">Imię</label>
-									<input class="form-control" type="text" id="Name"></input>
-								</div>
-								<div class="form-group">
-									<label for="inputSurname">Nazwisko</label>
-									<input class="form-control" type="text" id="Surname"></input>
-								</div>
-								<div class="form-group">
-									<label for="inputNumber">Numer Telefonu</label>
-									<input class="form-control" type="text" id="Number"></input>
-								</div>
-								<div class="form-group">
-									<label for="inputStatus">Status</label>
-									<input class="form-control" type="text" id="Status"></input>
-								</div>
-							</form>
-						</div>
-						<div class="modal-footer">
-							<button class="btn btn-primary" data-dismiss="modal">Anuluj</button>
-							<button class="btn btn-primary">Potwierdz</button>
-						</div>
-					</div>
-				</div>
-			</div>	
-
-		</div>
-	</div>
-</div>
-
-
-<!-- Button "Usuń"-->
-<div class="container">
-	<div class ="row">
-		<div class="col-md-8 offset-md-5">
-			<button class="btn btn-danger" data-target="#deleteModal" data-toggle="modal">Usuń</button>
 			<div class="modal" id="deleteModal" tabindex="-1">
-				<div class="modal-dialog modal-sm">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button class="close" data-dismiss="modal">&times;</button>
-						</div>
-						<div class="modal-body">
-							<form>
-								<div class="form-group">
-									<label for="inputID">ID Klienta</label>
-									<input class="form-control" type="text" id="ID"></input>
-								</div>
-							</form>
-						</div>
-						<div class="modal-footer">
-							<button class="btn btn-primary" data-dismiss="modal">Anuluj</button>
-							<button class="btn btn-primary">Potwierdz</button>
-						</div>
-					</div>
-				</div>
-			</div>	
-
 		</div>
 	</div>
 </div>
-
-
-
-
 
 <script type="text/javascript">
 	function getID() {
