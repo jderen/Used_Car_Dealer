@@ -14,7 +14,6 @@
 	<!-- Navigation Bar -->
 	<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="#"><img src="../../../../../../Bootstrap/img/eluwa.png"></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -44,19 +43,25 @@
 	</nav>
 	
 	<!-- Table -->
-	<input type="text" id="myID" onkeyup="getID()" placeholder="ID">
-	<input type="text" id="myBrand" onkeyup="getBrand()" placeholder="Marka">
-	<input type="text" id="myModel" onkeyup="getModel()" placeholder="Model">
-	<input type="text" id="myMileage" onkeyup="getMileage()" placeholder="Przebieg">
-	<input type="text" id="myYear" onkeyup="getYear()" placeholder="Rok Produkcji">
-	<input type="text" id="myEngineCapacity" onkeyup="getEngineCapacity()" placeholder="Pojemność Silnika">
-	<input type="text" id="myPower" onkeyup="getPower()" placeholder="Moc Silnika">
-	<input type="text" id="myFuel" onkeyup="getFuel()" placeholder="Paliwo">
-	<input type="text" id="myPrize" onkeyup="getPrize()" placeholder="Cena">
-	<input type="text" id="myDate" onkeyup="getDate()" placeholder="Data Wystawienia">
-	<input type="text" id="mySeller" onkeyup="getSeller()" placeholder="ID sprzedającego">
-	<input type="text" id="myPhoto" onkeyup="getPhoto()" placeholder="Zdjęcie">
-	<input type="text" id="myAccident" onkeyup="getAccident()" placeholder="Bezwypadkowy">
+	<div class="container">
+		<div class ="row">
+			<div class="col-md-10 offset-md-1">
+				<input type="text" id="myID" onkeyup="getID()" placeholder="ID">
+				<input type="text" id="myBrand" onkeyup="getBrand()" placeholder="Marka">
+				<input type="text" id="myModel" onkeyup="getModel()" placeholder="Model">
+				<input type="text" id="myMileage" onkeyup="getMileage()" placeholder="Przebieg">
+				<input type="text" id="myYear" onkeyup="getYear()" placeholder="Rok Produkcji">
+				<input type="text" id="myEngineCapacity" onkeyup="getEngineCapacity()" placeholder="Pojemność Silnika">
+				<input type="text" id="myPower" onkeyup="getPower()" placeholder="Moc Silnika">
+				<input type="text" id="myFuel" onkeyup="getFuel()" placeholder="Paliwo">
+				<input type="text" id="myPrize" onkeyup="getPrize()" placeholder="Cena">
+				<input type="text" id="myDate" onkeyup="getDate()" placeholder="Data Wystawienia">
+				<input type="text" id="mySeller" onkeyup="getSeller()" placeholder="ID sprzedającego">
+				<input type="text" id="myPhoto" onkeyup="getPhoto()" placeholder="Zdjęcie">
+				<input type="text" id="myAccident" onkeyup="getAccident()" placeholder="Bezwypadkowy">
+			</div>
+		</div>
+	</div>
 
 <div class="table-responsive">
 	<table class="table table-bordered table-hover" id="myTable"">
@@ -129,12 +134,40 @@
 </div>
 
 
-<!-- Button "Dodaj"-->
 <div class="container">
 	<div class ="row">
-		<div class="col-md-8 offset-md-5">
-			<button class="btn btn-success" data-target="#addModal" data-toggle="modal">Dodaj</button>
+		<div class="col-md-2 offset-md-5">
+			<div class="btn-group" role="group" aria-label="Basic example">
+				
+				<button class="btn btn-success" data-target="#addModal" data-toggle="modal">Dodaj</button>
+				<button class="btn btn-warning" data-target="#editModal" data-toggle="modal">Edytuj</button>
+				<button class="btn btn-danger" data-target="#deleteModal" data-toggle="modal">Usuń</button>
+			</div>
+			
+			<div class="modal" id="deleteModal" tabindex="-1">
+				<div class="modal-dialog modal-sm">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button class="close" data-dismiss="modal">&times;</button>
+						</div>
+						<div class="modal-body">
+							<form>
+								<div class="form-group">
+									<label for="inputID">ID Pojazdu</label>
+									<input class="form-control" type="text" id="ID"></input>
+								</div>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<button class="btn btn-primary" data-dismiss="modal">Anuluj</button>
+							<button class="btn btn-primary">Potwierdz</button>
+						</div>
+					</div>
+				</div>
+			</div>	
 			<div class="modal" id="addModal" tabindex="-1">
+			
+			
 				<div class="modal-dialog modal-sm">
 					<div class="modal-content">
 						<div class="modal-header">
@@ -199,17 +232,6 @@
 					</div>
 				</div>
 			</div>	
-
-		</div>
-	</div>
-</div>
-
-
-<!-- Button "Edytuj"-->
-<div class="container">
-	<div class ="row">
-		<div class="col-md-8 offset-md-5">
-			<button class="btn btn-warning" data-target="#editModal" data-toggle="modal">Edytuj</button>
 			<div class="modal" id="editModal" tabindex="-1">
 				<div class="modal-dialog modal-sm">
 					<div class="modal-content">
@@ -278,46 +300,10 @@
 						</div>
 					</div>
 				</div>
-			</div>	
-
+			</div>
 		</div>
 	</div>
 </div>
-
-
-<!-- Button "Usuń"-->
-<div class="container">
-	<div class ="row">
-		<div class="col-md-8 offset-md-5">
-			<button class="btn btn-danger" data-target="#deleteModal" data-toggle="modal">Usuń</button>
-			<div class="modal" id="deleteModal" tabindex="-1">
-				<div class="modal-dialog modal-sm">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button class="close" data-dismiss="modal">&times;</button>
-						</div>
-						<div class="modal-body">
-							<form>
-								<div class="form-group">
-									<label for="inputID">ID Pojazdu</label>
-									<input class="form-control" type="text" id="ID"></input>
-								</div>
-							</form>
-						</div>
-						<div class="modal-footer">
-							<button class="btn btn-primary" data-dismiss="modal">Anuluj</button>
-							<button class="btn btn-primary">Potwierdz</button>
-						</div>
-					</div>
-				</div>
-			</div>	
-
-		</div>
-	</div>
-</div>
-
-
-
 
 
 <!-- Search Function-->
