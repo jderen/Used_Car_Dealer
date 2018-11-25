@@ -8,7 +8,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-	<link href="../../../../../../Bootstrap/style.css" rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
 </head>
 <body>
 	<!-- Navigation Bar -->
@@ -121,56 +121,20 @@
 						<div class="modal-body">
 							<form>
 								<div class="form-group">
-									<label for="inputID">ID Pojazdu</label>
-									<input class="form-control" type="text" id="ID"></input>
+									<label for="inputName">Imię</label>
+									<input class="form-control" type="text" id="Name"></input>
 								</div>
 								<div class="form-group">
-									<label for="inputBrand">Marka</label>
-									<input class="form-control" type="text" id="Brand"></input>
+									<label for="inputSurname">Nazwisko</label>
+									<input class="form-control" type="text" id="Surname"></input>
 								</div>
 								<div class="form-group">
-									<label for="inputModel">Model</label>
-									<input class="form-control" type="text" id="Model"></input>
+									<label for="inputNumber">Numer Telefonu</label>
+									<input class="form-control" type="text" id="Number"></input>
 								</div>
 								<div class="form-group">
-									<label for="inputMileage">Przebieg</label>
-									<input class="form-control" type="text" id="Mileage"></input>
-								</div>
-								<div class="form-group">
-									<label for="inputYear">Rok Produkcji</label>
-									<input class="form-control" type="text" id="Year"></input>
-								</div>
-								<div class="form-group">
-									<label for="inputEngineCapacity">Pojemność Silnika</label>
-									<input class="form-control" type="text" id="EngineCapacity"></input>
-								</div>
-								<div class="form-group">
-									<label for="inputPower">Moc Silnika</label>
-									<input class="form-control" type="text" id="Power"></input>
-								</div>
-								<div class="form-group">
-									<label for="inputFuel">Rodzaj Paliwa</label>
-									<input class="form-control" type="text" id="Fuel"></input>
-								</div>
-								<div class="form-group">
-									<label for="inputPrize">Cena</label>
-									<input class="form-control" type="text" id="Prize"></input>
-								</div>
-								<div class="form-group">
-									<label for="inputDate">Data Wystawienia</label>
-									<input class="form-control" type="text" id="Date"></input>
-								</div>
-								<div class="form-group">
-									<label for="inputSeller">ID sprzedającego</label>
-									<input class="form-control" type="text" id="Seller"></input>
-								</div>
-								<div class="form-group">
-									<label for="inputPhoto">Zdjęcie</label>
-									<input class="form-control" type="text" id="Photo"></input>
-								</div>
-								<div class="form-group">
-									<label for="inputAccident">Bezwypadkowy</label>
-									<input class="form-control" type="text" id="Accident"></input>
+									<label for="inputStatus">Status</label>
+									<input class="form-control" type="text" id="Status"></input>
 								</div>
 							</form>
 						</div>
@@ -180,9 +144,65 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div>	
 			<div class="modal" id="editModal" tabindex="-1">
+				<div class="modal-dialog modal-sm">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button class="close" data-dismiss="modal">&times;</button>
+						</div>
+						<div class="modal-body">
+							<form>
+								<div class="form-group">
+									<label for="inputID">ID Klienta</label>
+									<input class="form-control" type="text" id="ID"></input>
+								</div>
+								<div class="form-group">
+									<label for="inputName">Imię</label>
+									<input class="form-control" type="text" id="Name"></input>
+								</div>
+								<div class="form-group">
+									<label for="inputSurname">Nazwisko</label>
+									<input class="form-control" type="text" id="Surname"></input>
+								</div>
+								<div class="form-group">
+									<label for="inputNumber">Numer Telefonu</label>
+									<input class="form-control" type="text" id="Number"></input>
+								</div>
+								<div class="form-group">
+									<label for="inputStatus">Status</label>
+									<input class="form-control" type="text" id="Status"></input>
+								</div>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<button class="btn btn-primary" data-dismiss="modal">Anuluj</button>
+							<button class="btn btn-primary">Potwierdz</button>
+						</div>
+					</div>
+				</div>
+			</div>	
 			<div class="modal" id="deleteModal" tabindex="-1">
+				<div class="modal-dialog modal-sm">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button class="close" data-dismiss="modal">&times;</button>
+						</div>
+						<div class="modal-body">
+							<form>
+								<div class="form-group">
+									<label for="inputID">ID Klienta</label>
+									<input class="form-control" type="text" id="ID"></input>
+								</div>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<button class="btn btn-primary" data-dismiss="modal">Anuluj</button>
+							<button class="btn btn-primary">Potwierdz</button>
+						</div>
+					</div>
+				</div>
+			</div>	
 		</div>
 	</div>
 </div>
