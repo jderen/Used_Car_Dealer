@@ -16,7 +16,11 @@ html, body{
   font-size: 1.1em !important;
 }
 
-
+.img { 
+  object-fit: cover;
+  width:230px;
+  height:230px;
+}
 
 
 
