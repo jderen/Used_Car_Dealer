@@ -6,6 +6,8 @@ import org.springframework.format.annotation.DateTimeFormat;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.sql.Date;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "Employees")
@@ -25,4 +27,11 @@ public class Employee {
     @OneToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "account_id", unique = true)
     Account account;
+    //eager is here to prevent overflow stack exception
+    @OneToMany(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER, mappedBy =  "employee")
+    @JoinColumn(name = "address_id")
+    Address address;
+
+    @OneToMany(cascade = CascadeType.PERSIST, mappedBy = "employee")
+    List<Transaction> transactions = new ArrayList<>();
 }
