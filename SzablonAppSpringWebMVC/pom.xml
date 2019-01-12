@@ -111,15 +111,6 @@
             <scope>provided</scope>
         </dependency>
 
-        <dependency>
-            <groupId>com.oracle</groupId>
-            <artifactId>ora-jdbc</artifactId>
-            <version>RELEASE</version>
-        </dependency>
-
-
-
-
     </dependencies>
 
 
