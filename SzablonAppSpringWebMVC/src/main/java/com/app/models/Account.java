@@ -1,4 +1,5 @@
 package com.app.models;
 
-public class Car {
+
+public class Account {
 }
