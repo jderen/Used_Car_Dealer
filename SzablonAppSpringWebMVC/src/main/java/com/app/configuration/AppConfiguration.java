@@ -61,6 +61,14 @@ public class AppConfiguration extends WebMvcConfigurerAdapter implements Applica
         return resolver;
     }
 
+
+    //MULTIPART
+    @Bean
+    public StandardServletMultipartResolver multipartResolver()
+    {
+        return new StandardServletMultipartResolver();
+    }
+
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry
@@ -69,11 +77,5 @@ public class AppConfiguration extends WebMvcConfigurerAdapter implements Applica
                 .setCachePeriod(1)
                 .resourceChain(true)
                 .addResolver(new PathResourceResolver());
-    }
-    //MULTIPART
-    @Bean
-    public StandardServletMultipartResolver multipartResolver()
-    {
-        return new StandardServletMultipartResolver();
     }
 }
