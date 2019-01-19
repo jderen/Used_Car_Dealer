@@ -1,9 +1,16 @@
 package com.app.models;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "Adresses")
 public class Address {
@@ -18,7 +25,7 @@ public class Address {
     String city;
     @Column(name = "post_code")
     String postCode;
-    @ManyToOne(cascade = CascadeType.PERSIST)
+    @OneToMany(cascade = CascadeType.PERSIST, mappedBy =  "address")
     List<Employee> employees = new ArrayList<>();
 
 }

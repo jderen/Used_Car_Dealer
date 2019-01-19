@@ -1,14 +1,14 @@
 package com.app.models;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "Clients")
 public class Client {
@@ -19,7 +19,7 @@ public class Client {
     String surname;
     @Column(name = "phone_number")
     String phoneNumber;
-    @ManyToOne(cascade = CascadeType.PERSIST)
+    @OneToMany(cascade = CascadeType.PERSIST, mappedBy = "lastOwner")
     List<Car> cars = new ArrayList<>();
 
 }

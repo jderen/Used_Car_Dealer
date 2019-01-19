@@ -1,5 +1,8 @@
 package com.app.models;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.JoinColumnOrFormula;
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -9,6 +12,9 @@ import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "Employees")
 public class Employee {
@@ -28,7 +34,7 @@ public class Employee {
     @JoinColumn(name = "account_id", unique = true)
     Account account;
     //eager is here to prevent overflow stack exception
-    @OneToMany(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER, mappedBy =  "employee")
+    @ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
     @JoinColumn(name = "address_id")
     Address address;
 
