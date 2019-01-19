@@ -1,8 +1,7 @@
 package com.app.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class MarkModelCar {
@@ -11,4 +10,6 @@ public class MarkModelCar {
     Long id;
     String model;
     String mark;
+    @OneToMany(cascade = CascadeType.PERSIST, mappedBy = "markModel")
+    List<Car> cars;
 }

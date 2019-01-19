@@ -1,6 +1,6 @@
 package com.app.models;
 
-import com.app.models.enums.RoleEnum;
+import com.app.models.enums.Role;
 
 import javax.persistence.*;
 
@@ -13,7 +13,7 @@ public class Account {
     String login;
     String password;
     @Enumerated(EnumType.STRING)
-    RoleEnum role;
+    Role role;
     @OneToOne(cascade = CascadeType.PERSIST, mappedBy = "account")
     Employee employee;
 }
