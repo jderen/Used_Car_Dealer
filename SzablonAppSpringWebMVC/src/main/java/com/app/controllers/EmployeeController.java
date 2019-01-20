@@ -110,7 +110,9 @@ public class EmployeeController {
         } catch (NullPointerException e) {
             System.out.println(e.getMessage());
             markModelDao.insert(car.getMarkModel());
+            car.setMarkModel(markModelDao.findByMarkAndModel(car.getMarkModel().getMark(),car.getMarkModel().getModel()).orElse(null));
         }
+        car.setPublishmentDate(LocalDate.now());
 
         carDao.insert(car);
         return "redirect:/employee/carsList";

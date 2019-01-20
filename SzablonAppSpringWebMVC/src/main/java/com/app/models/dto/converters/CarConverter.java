@@ -55,7 +55,7 @@ public class CarConverter {
                 .power(carDto.getPower())
                 .photoPath(carDto.getPhotoPath())
                 .lastOwner(new Client(carDto.getLastOwnerId(),carDto.getLastOwnerName(),carDto.getLastOwnerSurname(),null,null))
-                .markModel(new MarkModelCar(null, carDto.getMark(), carDto.getModel(), null))
+                .markModel(new MarkModelCar(null, carDto.getModel(), carDto.getMark(), null))
                 .price(carDto.getPrice())
                 .productionYear(carDto.getProductionYear())
                 .publishmentDate(carDto.getPublishmentDate())

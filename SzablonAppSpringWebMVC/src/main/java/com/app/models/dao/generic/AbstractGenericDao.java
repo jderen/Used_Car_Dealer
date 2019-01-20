@@ -26,7 +26,7 @@ public abstract class AbstractGenericDao<T> implements GenericDao<T> {
     @Override
     public void insert(T t) {
         if (entityManager != null && t != null){
-            entityManager.persist(t);
+            entityManager.merge(t);
         }
     }
 

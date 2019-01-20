@@ -24,9 +24,7 @@ public class MarkModelDaoImpl extends AbstractGenericDao<MarkModelCar> implement
             query.setParameter("mark", mark);
             query.setParameter("model", model);
             List<MarkModelDao> list = query.getResultList();
-            System.out.println(list);
             if (list != null && !list.isEmpty()){
-                System.out.println(list.get(0));
                 return Optional.ofNullable((MarkModelCar) list.get(0));
             }
         }
