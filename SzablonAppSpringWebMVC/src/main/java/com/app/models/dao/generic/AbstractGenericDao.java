@@ -4,6 +4,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import java.lang.reflect.ParameterizedType;
+import java.sql.SQLException;
+import java.sql.SQLSyntaxErrorException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -14,6 +16,10 @@ public abstract class AbstractGenericDao<T> implements GenericDao<T> {
     EntityManager entityManager;
 
     private Class<T> eClass = (Class<T>)((ParameterizedType)(this.getClass().getGenericSuperclass())).getActualTypeArguments()[0];
+
+    public Class<T> geteClass() {
+        return eClass;
+    }
 
     protected EntityManager getEntityManager(){ return entityManager; }
 
@@ -45,6 +51,7 @@ public abstract class AbstractGenericDao<T> implements GenericDao<T> {
 
         if (id != null && entityManager != null){
             object = Optional.of(entityManager.find(eClass,id));
+            return object;
         }
         return Optional.empty();
     }
@@ -63,7 +70,14 @@ public abstract class AbstractGenericDao<T> implements GenericDao<T> {
     public Long count(){
         if (entityManager != null){
             Query query = entityManager.createQuery("SELECT COUNT(c.id) FROM " + eClass.getCanonicalName() + " c");
-            return (Long) query.getSingleResult();
+
+            List<Long> list = query.getResultList();
+            if (list != null && !list.isEmpty())
+            {
+                return list.get(0);
+            }
+
+
         }
         return null;
     }
