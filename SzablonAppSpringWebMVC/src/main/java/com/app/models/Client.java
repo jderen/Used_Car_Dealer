@@ -19,7 +19,7 @@ public class Client {
     String surname;
     @Column(name = "phone_number")
     String phoneNumber;
-    @OneToMany(cascade = CascadeType.PERSIST, mappedBy = "lastOwner")
+    @OneToMany(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER,mappedBy = "lastOwner")
     List<Car> cars = new ArrayList<>();
 
 }
