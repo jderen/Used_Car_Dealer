@@ -48,12 +48,10 @@ public abstract class AbstractGenericDao<T> implements GenericDao<T> {
     @Override
     public Optional<T> findById(Long id) {
         Optional<T> object = Optional.empty();
-
-        if (id != null && entityManager != null){
-            object = Optional.of(entityManager.find(eClass,id));
-            return object;
+        if (entityManager != null && id != null){
+            object = Optional.of(entityManager.find(eClass, id));
         }
-        return Optional.empty();
+        return object;
     }
 
     @Override

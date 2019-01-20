@@ -103,7 +103,6 @@
 	</table>
 </div>
 
-
 <div class="container">
 	<div class ="row">
 		<div class="col-md-2 offset-md-5">
@@ -123,8 +122,8 @@
 						<div class="modal-body">
 							<form>
 								<div class="form-group">
-									<label for="inputID">ID Pojazdu</label>
-									<input class="form-control" type="text" id="ID"></input>
+									<label for="ID2">ID Pojazdu</label>
+									<input class="form-control" type="text" id="ID2"></input>
 								</div>
 							</form>
 						</div>
@@ -144,60 +143,67 @@
 							<button class="close" data-dismiss="modal">&times;</button>
 						</div>
 						<div class="modal-body">
-							<form th:object="${car}">
+							<form th:action="@{/employee/carsList}" th:method="post" th:object="${carAdd}">
+								<input class="form-control" type="text" name="id" id="id3" th:text="*{id}" hidden="hidden">
+								<input class="form-control" type="text" name="date" id="publishmentDate" th:text="*{publishmentDate}" hidden="hidden">
+								<input class="form-control" type="text" name="loName" id="loName" th:text="*{lastOwnerName}" hidden="hidden">
+								<input class="form-control" type="text" name="loSurname" id="loSurname" th:text="*{lastOwnerSurname}" hidden="hidden">
+								<input class="form-control" type="text" name="loName" id="loName" th:text="*{lastOwnerName}" hidden="hidden">
 								<div class="form-group">
 									<label for="mark">Marka</label>
-									<input class="form-control" type="text" id="mark" th:text="*{mark}"></input>
+									<input class="form-control" type="text" name="mark" id="mark" th:text="*{mark}">
 								</div>
 								<div class="form-group">
-									<label for="inputModel">Model</label>
-									<input class="form-control" type="text" id="Model"></input>
+									<label for="model2">Model</label>
+									<input class="form-control" type="text" name="model" id="model2" th:text="*{model}">
 								</div>
 								<div class="form-group">
-									<label for="inputMileage">Przebieg</label>
-									<input class="form-control" type="text" id="Mileage"></input>
+									<label for="mileage2">Przebieg (km)</label>
+									<input class="form-control" type="text" name="mileage" id="mileage2" th:text="*{mileage}">
 								</div>
 								<div class="form-group">
-									<label for="inputYear">Rok Produkcji</label>
-									<input class="form-control" type="text" id="Year"></input>
+									<label for="year2">Rok produkcji</label>
+									<input class="form-control" type="text" name="productionYear" id="year2" th:text="*{productionYear}">
 								</div>
 								<div class="form-group">
-									<label for="inputEngineCapacity">Pojemność Silnika</label>
-									<input class="form-control" type="text" id="EngineCapacity"></input>
+									<label for="engine2">Pojemność silnika (l.)</label>
+									<input class="form-control" type="text" name="engineCapacity" id="engine2" th:text="*{engineCapacity}">
 								</div>
 								<div class="form-group">
-									<label for="inputPower">Moc Silnika</label>
-									<input class="form-control" type="text" id="Power"></input>
+									<label for="power2">Moc (KM)</label>
+									<input class="form-control" type="text" name="power" id="power2" th:text="*{power}">
 								</div>
 								<div class="form-group">
-									<label for="inputFuel">Rodzaj Paliwa</label>
-									<input class="form-control" type="text" id="Fuel"></input>
+									<label for="fuel2">Rodzaj paliwa</label>
+									<ul id="fuel2" class="list-inline">
+										<li th:each="f : ${fuels}" class="list-inline-item">
+											<input type="radio" name="fuelType" th:field="*{fuelType}" th:value="${f}"/>
+											<label th:text="${f}"></label>
+										</li>
+									</ul>
 								</div>
 								<div class="form-group">
-									<label for="inputPrize">Cena</label>
-									<input class="form-control" type="text" id="Prize"></input>
+									<label for="price">Cena</label>
+									<input class="form-control" type="text" name="price" id="price" th:text="*{price}">
+								</div>
+
+								<div class="form-group">
+									<label for="sellerId">ID sprzedającego</label>
+									<input class="form-control" type="text" name="lastOwnerId" id="sellerId" th:text="*{lastOwnerId}">
 								</div>
 								<div class="form-group">
-									<label for="inputDate">Data Wystawienia</label>
-									<input class="form-control" type="text" id="Date"></input>
+									<label for="photo2">Zdjęcie</label>
+									<input class="form-control" type="text" name="photoPath" id="photo2" th:text="*{photoPath}">
 								</div>
 								<div class="form-group">
-									<label for="inputSeller">ID sprzedającego</label>
-									<input class="form-control" type="text" id="Seller"></input>
+									<label for="accident2">Bezwypadkowy</label>
+									<input class="form-control" type="text" name="accidents" id="accident2" th:text="*{accidents}">
 								</div>
-								<div class="form-group">
-									<label for="inputPhoto">Zdjęcie</label>
-									<input class="form-control" type="text" id="Photo"></input>
-								</div>
-								<div class="form-group">
-									<label for="inputAccident">Bezwypadkowy</label>
-									<input class="form-control" type="text" id="Accident"></input>
+								<div class="modal-footer">
+									<button class="btn btn-primary" data-dismiss="modal">Anuluj</button>
+									<button class="btn btn-primary" type="submit">Potwierdz</button>
 								</div>
 							</form>
-						</div>
-						<div class="modal-footer">
-							<button class="btn btn-primary" data-dismiss="modal">Anuluj</button>
-							<button class="btn btn-primary">Potwierdz</button>
 						</div>
 					</div>
 				</div>
@@ -211,55 +217,55 @@
 						<div class="modal-body">
 							<form>
 								<div class="form-group">
-									<label for="inputID">ID Pojazdu</label>
+									<label for="ID">ID Pojazdu</label>
 									<input class="form-control" type="text" id="ID"></input>
 								</div>
 								<div class="form-group">
-									<label for="inputBrand">Marka</label>
+									<label for="Brand">Marka</label>
 									<input class="form-control" type="text" id="Brand"></input>
 								</div>
 								<div class="form-group">
-									<label for="inputModel">Model</label>
+									<label for="Model">Model</label>
 									<input class="form-control" type="text" id="Model"></input>
 								</div>
 								<div class="form-group">
-									<label for="inputMileage">Przebieg</label>
+									<label for="Mileage">Przebieg</label>
 									<input class="form-control" type="text" id="Mileage"></input>
 								</div>
 								<div class="form-group">
-									<label for="inputYear">Rok Produkcji</label>
+									<label for="Year">Rok Produkcji</label>
 									<input class="form-control" type="text" id="Year"></input>
 								</div>
 								<div class="form-group">
-									<label for="inputEngineCapacity">Pojemność Silnika</label>
+									<label for="EngineCapacity">Pojemność Silnika</label>
 									<input class="form-control" type="text" id="EngineCapacity"></input>
 								</div>
 								<div class="form-group">
-									<label for="inputPower">Moc Silnika</label>
+									<label for="Power">Moc Silnika</label>
 									<input class="form-control" type="text" id="Power"></input>
 								</div>
 								<div class="form-group">
-									<label for="inputFuel">Rodzaj Paliwa</label>
+									<label for="Fuel">Rodzaj Paliwa</label>
 									<input class="form-control" type="text" id="Fuel"></input>
 								</div>
 								<div class="form-group">
-									<label for="inputPrize">Cena</label>
+									<label for="Prize">Cena</label>
 									<input class="form-control" type="text" id="Prize"></input>
 								</div>
 								<div class="form-group">
-									<label for="inputDate">Data Wystawienia</label>
+									<label for="Date">Data Wystawienia</label>
 									<input class="form-control" type="text" id="Date"></input>
 								</div>
 								<div class="form-group">
-									<label for="inputSeller">ID sprzedającego</label>
+									<label for="Seller">ID sprzedającego</label>
 									<input class="form-control" type="text" id="Seller"></input>
 								</div>
 								<div class="form-group">
-									<label for="inputPhoto">Zdjęcie</label>
+									<label for="Photo">Zdjęcie</label>
 									<input class="form-control" type="text" id="Photo"></input>
 								</div>
 								<div class="form-group">
-									<label for="inputAccident">Bezwypadkowy</label>
+									<label for="Accident">Bezwypadkowy</label>
 									<input class="form-control" type="text" id="Accident"></input>
 								</div>
 							</form>

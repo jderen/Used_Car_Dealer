@@ -3,21 +3,29 @@ package com.app.models.dto.converters;
 import com.app.models.Car;
 import com.app.models.Client;
 import com.app.models.MarkModelCar;
-import com.app.models.dao.ClientDao;
-import com.app.models.dao.ClientDaoImpl;
-import com.app.models.dao.MarkModelDao;
-import com.app.models.dao.MarkModelDaoImpl;
+import com.app.models.dao.*;
 import com.app.models.dto.CarDto;
 import com.app.models.enums.FuelType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.transaction.Transactional;
+
 @Data
 @NoArgsConstructor
 public class CarConverter {
+
+    private ClientDao clientDao;
+    private MarkModelDao markModelDao;
+
+    public CarConverter(ClientDao clientDao, MarkModelDao markModelDao) {
+        this.clientDao = clientDao;
+        this.markModelDao = markModelDao;
+    }
+
     public CarDto carToCarDto(Car car){
-        return CarDto.builder()
+        return car == null ? null : CarDto.builder()
                 .id(car.getId())
                 .mileage(car.getMileage())
                 .productionYear(car.getProductionYear())
@@ -37,19 +45,38 @@ public class CarConverter {
     }
 
     public Car carDtoToCar(CarDto carDto){
-        return Car.builder()
+
+        Car car = Car.builder()
                 .id(carDto.getId())
                 .accidents(carDto.getAccidents() == null ? null : carDto.getAccidents().equals("bezwypadkowy"))
                 .engineCapacity(carDto.getEngineCapacity())
                 .fuelType(FuelType.valueOf(carDto.getFuelType()))
-                .lastOwner(new ClientDaoImpl().findById(carDto.getId()).orElseThrow(NullPointerException::new))
-                .markModel(new MarkModelDaoImpl().findByMarkAndModel(carDto.getMark(),carDto.getModel()).orElseThrow(NullPointerException::new))
                 .mileage(carDto.getMileage())
                 .power(carDto.getPower())
                 .photoPath(carDto.getPhotoPath())
+                .lastOwner(new Client(carDto.getLastOwnerId(),carDto.getLastOwnerName(),carDto.getLastOwnerSurname(),null,null))
+                .markModel(new MarkModelCar(null, carDto.getMark(), carDto.getModel(), null))
                 .price(carDto.getPrice())
                 .productionYear(carDto.getProductionYear())
                 .publishmentDate(carDto.getPublishmentDate())
                 .build();
+
+       /* try{
+            car.setLastOwner(clientDao.findById(carDto.getLastOwnerId()).orElseThrow(NullPointerException::new));
+        }catch (NullPointerException e){
+            System.out.println(e.getMessage());
+            car.setLastOwner(null);
+        }
+
+        try{
+            car.setMarkModel(markModelDao.findByMarkAndModel(carDto.getMark(), carDto.getModel()).orElseThrow(NullPointerException::new));
+        }catch (NullPointerException e){
+            System.out.println(e.getMessage());
+            MarkModelCar markModelCar = new MarkModelCar(null, carDto.getMark(), carDto.getModel(), null);
+            markModelDao.insert(markModelCar);
+            car.setMarkModel(markModelCar);
+        }*/
+
+        return car;
     }
 }
