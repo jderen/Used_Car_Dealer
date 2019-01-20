@@ -20,23 +20,23 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav ml-auto">
-					<!--<li class="nav-item active">
-						<a class="nav-link" href="#">Szukaj</a>
+					<li class="nav-item active">
+						<a class="nav-link" href="/employee/cars">Szukaj</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Samochód</a>
+						<a class="nav-link" href="/employee/carsList">Samochód</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Klient</a>
+						<a class="nav-link" href="/employee/clients">Klient</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Transakcja</a>
+						<a class="nav-link" href="/employee/transactions">Transakcja</a>
 					</li>
+					<!--<li class="nav-item">
+                        <a class="nav-link" href="accounts">Konto</a>
+                    </li>-->
 					<li class="nav-item">
-						<a class="nav-link" href="#">Konto</a>
-					</li>-->
-					<li class="nav-item">
-						<a class="nav-link" href="/employee/">Zaloguj</a>
+						<a class="nav-link" href="/employee/">Wyloguj</a>
 					</li>
 				</ul>
 			</div>
@@ -45,11 +45,6 @@
 	<br>
 	<!-- Navigation Bar -->
 
-
-
-<div class="row">
-    <div class="col-md-8 offset-md-2">
-	
 	<div class="container">
 		<div class ="row">
 			<div class="col-md-8 offset-md-2">
@@ -63,18 +58,18 @@
 					<div class="input-group-prepend">
 						<span class="input-group-text" id="">Cena</span>
 					</div>
-					<input type="text" id="myPriceFrom" onkeyup="getPriceFrom()" placeholder="od"> 
-					<input type="text" id="myPriceTo" onkeyup="getPriceTo()" placeholder="do"> 
+					<input type="text" id="myPriceFrom" onkeyup="getPriceFrom()" placeholder="od">
+					<input type="text" id="myPriceTo" onkeyup="getPriceTo()" placeholder="do">
 				</div>
 			</div>
 		</div>
 	</div>
 
 
-
+<div class="row">
+    <div class="col-md-8 offset-md-2">
 
 	<!-- Cars list -->
-
 
 	<div class="row">
 		<div class="col-md-8 offset-md-2">
@@ -93,7 +88,6 @@
 						</td>
 					</tr>
 					<tr>
-
 						<td width="25%">
 							<h5 th:text="'Rocznik: ' + ${c.productionYear}" class="font-weight-bold align-items-center"></h5>
 						</td>
@@ -102,7 +96,6 @@
 							<h6 th:text="'Rodzaj paliwa: ' + ${c.fuelType}" class=" align-items-center"></h6>
 						</td>
 						<td></td>
-
 					</tr>
 					<tr>
 						<td width="25%" >

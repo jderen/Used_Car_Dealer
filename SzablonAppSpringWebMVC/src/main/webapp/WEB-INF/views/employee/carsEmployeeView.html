@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -80,54 +80,24 @@
 	<th onclick="sortTable(9)">Data Wystawienia</th>
 	<th onclick="sortTable(10)">ID sprzedającego</th>
 	<th onclick="sortTable(11)">Zdjęcie</th>
-	<th onclick="sortTable(12)">Bezwypadkowy</th>
+	<th onclick="sortTable(12)">Bezwypadkowy?</th>
 		</tr>
 	  </thead>
 	  <tbody>
-		<tr class="item">
-		  <td>1</td>
-		  <td>Mercedes</td>
-		  <td>eCorsa</td>
-		  <td>105000</td>
-		  <td>1999</td>
-		  <td>2100</td>
-		  <td>160</td>
-		  <td>Benzyna</td>
-		  <td>10050</td>
-		  <td>10-10-2018</td>
-		  <td>1</td>
-		  <td>zdjecie</td>
-		  <td>Tak</td>
-		</tr>
-		<tr class="item">
-		  <td>2</td>
-		  <td>Opel</td>
-		  <td>aCorsa</td>
-		  <td>205000</td>
-		  <td>1995</td>
-		  <td>2300</td>
-		  <td>150</td>
-		  <td>LPG</td>
-		  <td>999999</td>
-		  <td>10-11-2018</td>
-		  <td>2</td>
-		  <td>zdjecie</td>
-		  <td>Nie</td>
-		</tr>
-		<tr class="item">
-		  <td>3</td>
-		  <td>Subaru</td>
-		  <td>bCorsa</td>
-		  <td>342484</td>
-		  <td>2001</td>
-		  <td>1400</td>
-		  <td>70</td>
-		  <td>Diesel</td>
-		  <td>109900</td>
-		  <td>10-10-2017</td>
-		  <td>3</td>
-		  <td>zdjecie</td>
-		  <td>Tak</td>
+		<tr class="item" th:each="c : ${cars}">
+		  <td th:text="${c.id}"></td>
+		  <td th:text="${c.mark}"></td>
+		  <td th:text="${c.model}"></td>
+		  <td th:text="${c.mileage}"></td>
+		  <td th:text="${c.productionYear}"></td>
+		  <td th:text="${c.engineCapacity}"></td>
+		  <td th:text="${c.power}"></td>
+		  <td th:text="${c.fuelType}"></td>
+		  <td th:text="${c.price}"></td>
+		  <td th:text="${c.publishmentDate}"></td>
+		  <td th:text="${c.lastOwnerId}"></td>
+		  <td th:text="${c.photoPath}"></td>
+		  <td th:text="${c.accidents}"></td>
 		</tr>
 	  </tbody>
 	</table>
@@ -174,10 +144,10 @@
 							<button class="close" data-dismiss="modal">&times;</button>
 						</div>
 						<div class="modal-body">
-							<form>
+							<form th:object="${car}">
 								<div class="form-group">
-									<label for="inputBrand">Marka</label>
-									<input class="form-control" type="text" id="Brand"></input>
+									<label for="mark">Marka</label>
+									<input class="form-control" type="text" id="mark" th:text="*{mark}"></input>
 								</div>
 								<div class="form-group">
 									<label for="inputModel">Model</label>

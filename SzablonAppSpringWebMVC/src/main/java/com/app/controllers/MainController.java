@@ -3,25 +3,14 @@ import com.app.models.Car;
 import com.app.models.Employee;
 import com.app.models.dao.CarDao;
 import com.app.models.dao.EmployeeDao;
-import com.app.models.dao.EmployeeDaoImpl;
 import com.app.models.dto.CarDto;
 import com.app.models.dto.converters.CarConverter;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.util.FileCopyUtils;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.validation.constraints.Null;
-import java.io.File;
-import java.io.IOException;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-import java.util.stream.Collectors;
 
 @Controller
 public class MainController {

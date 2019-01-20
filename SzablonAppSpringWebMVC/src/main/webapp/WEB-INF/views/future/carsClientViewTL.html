@@ -45,40 +45,12 @@
 	<br>
 	<!-- Navigation Bar -->
 
-
-
-<div class="row">
-    <div class="col-md-8 offset-md-2">
-	
-	<div class="container">
-		<div class ="row">
-			<div class="col-md-8 offset-md-2">
-				<input type="text" id="myBrand" onkeyup="getBrand()" placeholder="Marka">
-				<input type="text" id="myModel" onkeyup="getModel()" placeholder="Model">
-				<input type="text" id="myEngine" onkeyup="getEngine()" placeholder="Pojemność silnika">
-				<input type="text" id="myFuel" onkeyup="getFuel()" placeholder="Rodzja paliwa">
-				<input type="text" id="myPower" onkeyup="getPower()" placeholder="Moc">
-				<input type="text" id="myMileage" onkeyup="getMileage()" placeholder="Przebieg">
-				<div class="input-group">
-					<div class="input-group-prepend">
-						<span class="input-group-text" id="">Cena</span>
-					</div>
-					<input type="text" id="myPriceFrom" onkeyup="getPriceFrom()" placeholder="od"> 
-					<input type="text" id="myPriceTo" onkeyup="getPriceTo()" placeholder="do"> 
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-
-
 	<!-- Cars list -->
 
 
 	<div class="row">
 		<div class="col-md-8 offset-md-2">
-			<table th:each="c : ${cars}" class="table" id="myTable">
+			<table th:each="c : ${cars}" class="table">
 				<tbody>
 					<tr>
 						<td width="15%" rowspan="3">
@@ -127,32 +99,6 @@
 			</table>
 	</div>
 	</div>
-
-
-
-
-<script type="text/javascript">
-	function getBrand() {
-	  var input, filter, table, tr, td, i;
-	  input = document.getElementById("myBrand");
-	  filter = input.value.toUpperCase();
-	  table = document.getElementById("myTable");
-	  tr = table.getElementsByTagName("tr");
-	  for (i = 0; i < tr.length; i++) {
-		td = tr[i].getElementsByTagName("td")[0];
-		if (td) {
-		  if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-			tr[i].style.display = "";
-		  } else {
-			tr[i].style.display = "none";
-		  }
-		}
-	  }
-	}
-	</script>
-
-
-
 
 	<!-- Cars list -->
 </body>
