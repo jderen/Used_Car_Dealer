@@ -6,10 +6,12 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@Builder
 @Table(name = "Clients")
 public class Client {
     @Id
@@ -21,5 +23,16 @@ public class Client {
     String phoneNumber;
     @OneToMany(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER,mappedBy = "lastOwner")
     List<Car> cars = new ArrayList<>();
+    @OneToMany(cascade = CascadeType.PERSIST, mappedBy = "client")
+    List<Transaction> transactions = new ArrayList<>();
 
+    @Override
+    public String toString() {
+        return "Client{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                '}';
+    }
 }

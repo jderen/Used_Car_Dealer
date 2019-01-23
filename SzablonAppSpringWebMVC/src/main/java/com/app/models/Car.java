@@ -1,17 +1,16 @@
 package com.app.models;
 
 import com.app.models.enums.FuelType;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+import org.springframework.context.annotation.Configuration;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.sql.Date;
 import java.time.LocalDate;
 
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
@@ -28,8 +27,9 @@ public class Car {
     Double engineCapacity;
     Long power;
     @Enumerated(value = EnumType.STRING)
-    @Column(name = "fuel_type", precision = 20, scale = 2)
+    @Column(name = "fuel_type")
     FuelType fuelType;
+    @Column(precision = 20, scale = 2)
     Double price;
     @Column(name = "publishment_date")
     LocalDate publishmentDate;
@@ -43,4 +43,21 @@ public class Car {
     Boolean accidents;
     String photoPath;
 
+    @Override
+    public String toString() {
+        return "Car{" +
+                "id=" + id +
+                ", mileage=" + mileage +
+                ", productionYear=" + productionYear +
+                ", engineCapacity=" + engineCapacity +
+                ", power=" + power +
+                ", fuelType=" + fuelType +
+                ", price=" + price +
+                ", publishmentDate=" + publishmentDate +
+                ", lastOwner=" + lastOwner.id +
+                ", markModel=" + markModel.id +
+                ", accidents=" + accidents +
+                ", photoPath='" + photoPath + '\'' +
+                '}';
+    }
 }

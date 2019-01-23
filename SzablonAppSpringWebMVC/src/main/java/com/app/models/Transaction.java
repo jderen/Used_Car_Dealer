@@ -1,19 +1,19 @@
 package com.app.models;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.sql.Date;
 import java.time.LocalDate;
 
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "Transactions")
+@Builder
+@Table(name = "transactions")
 public class Transaction {
     @Id
     @GeneratedValue
@@ -27,4 +27,18 @@ public class Transaction {
     @ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
     @JoinColumn(name = "car_id")
     Car car;
+    @ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
+    @JoinColumn(name = "client_id")
+    Client client;
+
+    @Override
+    public String toString() {
+        return "Transaction{" +
+                "id=" + id +
+                ", price=" + price +
+                ", transactionDate=" + transactionDate +
+                ", employee=" + employee.id +
+                ", car=" + car.id +
+                '}';
+    }
 }

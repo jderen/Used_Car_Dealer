@@ -1,8 +1,6 @@
 package com.app.models;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.hibernate.annotations.JoinColumnOrFormula;
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -12,10 +10,12 @@ import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@Builder
 @Table(name = "Employees")
 public class Employee {
     @Id
@@ -40,4 +40,18 @@ public class Employee {
 
     @OneToMany(cascade = CascadeType.PERSIST, mappedBy = "employee")
     List<Transaction> transactions = new ArrayList<>();
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", hireDate=" + hireDate +
+                ", salary=" + salary +
+                ", account=" + account.id +
+                ", address=" + address.id +
+                '}';
+    }
 }
