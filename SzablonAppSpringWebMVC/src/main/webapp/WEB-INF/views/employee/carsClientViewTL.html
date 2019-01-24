@@ -66,18 +66,15 @@
 	</div>
 
 
-<div class="row">
-    <div class="col-md-8 offset-md-2">
 
 	<!-- Cars list -->
-
 	<div class="row">
 		<div class="col-md-8 offset-md-2">
 			<table th:each="c : ${cars}" class="table" id="myTable">
 				<tbody>
 					<tr>
 						<td width="15%" rowspan="3">
-							<img th:src="@{/static/img/{name}(name=${c.photoPath})}">
+							<img th:src="@{/static/img/{name}(name=${c.photoPath})}"/>
 						</td>
 						<td colspan="2">
 							<h1 th:text="${c.mark} + ' ' + ${c.model}" class="font-weight-bold text-uppercase"></h1>
@@ -120,7 +117,7 @@
 			</table>
 	</div>
 	</div>
-
+	<!-- Cars list -->
 
 
 

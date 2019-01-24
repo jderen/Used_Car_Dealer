@@ -1,618 +1,638 @@
 <!DOCTYPE html>
 <html lang="pl" xmlns:th="http://www.thymeleaf.org">
 <head>
-	<meta charset="utf-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1"/>
-	<title>Komis Samochodowy ELO</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-	<link href="../../../static/css/style.css" rel="stylesheet">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Komis Samochodowy</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link href="../../../static/css/style.css" rel="stylesheet">
 </head>
 <body>
-	<!-- Navigation Bar -->
-	<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
-		<div class="container-fluid">
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarResponsive">
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item active">
-						<a class="nav-link" href="/employee/cars">Szukaj</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="/employee/carsList">Samochód</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="/employee/clients">Klient</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="/employee/transactions">Transakcja</a>
-					</li>
-					<!--<li class="nav-item">
-						<a class="nav-link" href="accounts">Konto</a>
-					</li>-->
-					<li class="nav-item">
-						<a class="nav-link" href="">Wyloguj</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-	
-	<!-- Table -->
-	<div class="container">
-		<div class ="row">
-			<div class="col-md-10 offset-md-1">
-				<input type="text" id="myID" onkeyup="getID()" placeholder="ID">
-				<input type="text" id="myBrand" onkeyup="getBrand()" placeholder="Marka">
-				<input type="text" id="myModel" onkeyup="getModel()" placeholder="Model">
-				<input type="text" id="myMileage" onkeyup="getMileage()" placeholder="Przebieg">
-				<input type="text" id="myYear" onkeyup="getYear()" placeholder="Rok Produkcji">
-				<input type="text" id="myEngineCapacity" onkeyup="getEngineCapacity()" placeholder="Pojemność Silnika">
-				<input type="text" id="myPower" onkeyup="getPower()" placeholder="Moc Silnika">
-				<input type="text" id="myFuel" onkeyup="getFuel()" placeholder="Paliwo">
-				<input type="text" id="myPrize" onkeyup="getPrize()" placeholder="Cena">
-				<input type="text" id="myDate" onkeyup="getDate()" placeholder="Data Wystawienia">
-				<input type="text" id="mySeller" onkeyup="getSeller()" placeholder="ID sprzedającego">
-				<input type="text" id="myPhoto" onkeyup="getPhoto()" placeholder="Zdjęcie">
-				<input type="text" id="myAccident" onkeyup="getAccident()" placeholder="Bezwypadkowy">
-			</div>
-		</div>
-	</div>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/employee/cars">Szukaj</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/employee/carsList">Samochód</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/employee/clients">Klient</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/employee/transactions">Transakcja</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Wyloguj</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Table -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 offset-md-1">
+            <input type="text" id="myID" onkeyup="getID()" placeholder="ID">
+            <input type="text" id="myBrand" onkeyup="getBrand()" placeholder="Marka">
+            <input type="text" id="myModel" onkeyup="getModel()" placeholder="Model">
+            <input type="text" id="myMileage" onkeyup="getMileage()" placeholder="Przebieg">
+            <input type="text" id="myYear" onkeyup="getYear()" placeholder="Rok Produkcji">
+            <input type="text" id="myEngineCapacity" onkeyup="getEngineCapacity()" placeholder="Pojemność Silnika">
+            <input type="text" id="myPower" onkeyup="getPower()" placeholder="Moc Silnika">
+            <input type="text" id="myFuel" onkeyup="getFuel()" placeholder="Paliwo">
+            <input type="text" id="myPrize" onkeyup="getPrize()" placeholder="Cena">
+            <input type="text" id="myDate" onkeyup="getDate()" placeholder="Data Wystawienia">
+            <input type="text" id="mySeller" onkeyup="getSeller()" placeholder="ID sprzedającego">
+            <input type="text" id="myPhoto" onkeyup="getPhoto()" placeholder="Zdjęcie">
+            <input type="text" id="myAccident" onkeyup="getAccident()" placeholder="Bezwypadkowy">
+        </div>
+    </div>
+</div>
 
 <div class="table-responsive">
-	<table class="table table-bordered table-hover" id="myTable">
-	  <thead class="thead-light">
-	  	<thead>
-		<tr>
-	<th onclick="sortTable(0)">ID</th>
-	<th onclick="sortTable(1)">Marka</th>
-	<th onclick="sortTable(2)">Model</th>
-	<th onclick="sortTable(3)">Przebieg</th>
-	<th onclick="sortTable(4)">Rok Produkcji</th>
-	<th onclick="sortTable(5)">Pojemność silnika</th>
-	<th onclick="sortTable(6)">Moc Silnika</th>
-	<th onclick="sortTable(7)">Rodzaj Paliwa</th>
-	<th onclick="sortTable(8)">Cena</th>
-	<th onclick="sortTable(9)">Data Wystawienia</th>
-	<th onclick="sortTable(10)">ID sprzedającego</th>
-	<th onclick="sortTable(11)">Zdjęcie</th>
-	<th onclick="sortTable(12)">Bezwypadkowy?</th>
-		</tr>
-	  </thead>
-	  <tbody>
-		<tr class="item" th:each="c : ${cars}">
-		  <td th:text="${c.id}"></td>
-		  <td th:text="${c.mark}"></td>
-		  <td th:text="${c.model}"></td>
-		  <td th:text="${c.mileage}"></td>
-		  <td th:text="${c.productionYear}"></td>
-		  <td th:text="${c.engineCapacity}"></td>
-		  <td th:text="${c.power}"></td>
-		  <td th:text="${c.fuelType}"></td>
-		  <td th:text="${c.price}"></td>
-		  <td th:text="${c.publishmentDate}"></td>
-		  <td th:text="${c.lastOwnerId}"></td>
-		  <td th:text="${c.photoPath}"></td>
-		  <td th:text="${c.accidents}"></td>
-		</tr>
-	  </tbody>
-	</table>
+    <table class="table table-bordered table-hover" id="myTable">
+        <thead class="thead-light">
+        <thead>
+        <tr>
+            <th onclick="sortTable(0)">ID</th>
+            <th onclick="sortTable(1)">Marka</th>
+            <th onclick="sortTable(2)">Model</th>
+            <th onclick="sortTable(3)">Przebieg</th>
+            <th onclick="sortTable(4)">Rok Produkcji</th>
+            <th onclick="sortTable(5)">Pojemność silnika</th>
+            <th onclick="sortTable(6)">Moc Silnika</th>
+            <th onclick="sortTable(7)">Rodzaj Paliwa</th>
+            <th onclick="sortTable(8)">Cena</th>
+            <th onclick="sortTable(9)">Data Wystawienia</th>
+            <th onclick="sortTable(10)">ID sprzedającego</th>
+            <th onclick="sortTable(11)">Zdjęcie</th>
+            <th onclick="sortTable(12)">Bezwypadkowy?</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="item" th:each="c : ${cars}">
+            <td th:text="${c.id}"></td>
+            <td th:text="${c.mark}"></td>
+            <td th:text="${c.model}"></td>
+            <td th:text="${c.mileage}"></td>
+            <td th:text="${c.productionYear}"></td>
+            <td th:text="${c.engineCapacity}"></td>
+            <td th:text="${c.power}"></td>
+            <td th:text="${c.fuelType}"></td>
+            <td th:text="${c.price}"></td>
+            <td th:text="${c.publishmentDate}"></td>
+            <td th:text="${c.lastOwnerId}"></td>
+            <td th:text="${c.photoPath}"></td>
+            <td th:text="${c.accidents}"></td>
+        </tr>
+        </tbody>
+    </table>
 </div>
 
 <div class="container">
-	<div class ="row">
-		<div class="col-md-2 offset-md-5">
-			<div class="btn-group" role="group" aria-label="Basic example">
-				
-				<button class="btn btn-success" data-target="#addModal" data-toggle="modal">Dodaj</button>
-				<button class="btn btn-warning" data-target="#editModal" data-toggle="modal">Edytuj</button>
-				<button class="btn btn-danger" data-target="#deleteModal" data-toggle="modal">Usuń</button>
-			</div>
-			
-			<div class="modal" id="deleteModal" tabindex="-1">
-				<div class="modal-dialog modal-sm">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button class="close" data-dismiss="modal">&times;</button>
-						</div>
-						<div class="modal-body">
-							<form>
-								<div class="form-group">
-									<label for="ID2">ID Pojazdu</label>
-									<input class="form-control" type="text" id="ID2"></input>
-								</div>
-							</form>
-						</div>
-						<div class="modal-footer">
-							<button class="btn btn-primary" data-dismiss="modal">Anuluj</button>
-							<button class="btn btn-primary">Potwierdz</button>
-						</div>
-					</div>
-				</div>
-			</div>	
-			<div class="modal" id="addModal" tabindex="-1">
-			
-			
-				<div class="modal-dialog modal-sm">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button class="close" data-dismiss="modal">&times;</button>
-						</div>
-						<div class="modal-body">
-							<form th:action="@{/employee/carsList}" th:method="post" th:object="${carAdd}">
-								<input class="form-control" type="text" name="id" id="id3" th:text="*{id}" hidden="hidden">
-								<input class="form-control" type="text" name="date" id="publishmentDate" th:text="*{publishmentDate}" hidden="hidden">
-								<input class="form-control" type="text" name="loName" id="loName" th:text="*{lastOwnerName}" hidden="hidden">
-								<input class="form-control" type="text" name="loSurname" id="loSurname" th:text="*{lastOwnerSurname}" hidden="hidden">
-								<input class="form-control" type="text" name="loName" id="loName" th:text="*{lastOwnerName}" hidden="hidden">
-								<div class="form-group">
-									<label for="mark">Marka</label>
-									<input class="form-control" type="text" name="mark" id="mark" th:text="*{mark}">
-								</div>
-								<div class="form-group">
-									<label for="model2">Model</label>
-									<input class="form-control" type="text" name="model" id="model2" th:text="*{model}">
-								</div>
-								<div class="form-group">
-									<label for="mileage2">Przebieg (km)</label>
-									<input class="form-control" type="text" name="mileage" id="mileage2" th:text="*{mileage}">
-								</div>
-								<div class="form-group">
-									<label for="year2">Rok produkcji</label>
-									<input class="form-control" type="text" name="productionYear" id="year2" th:text="*{productionYear}">
-								</div>
-								<div class="form-group">
-									<label for="engine2">Pojemność silnika (l.)</label>
-									<input class="form-control" type="text" name="engineCapacity" id="engine2" th:text="*{engineCapacity}">
-								</div>
-								<div class="form-group">
-									<label for="power2">Moc (KM)</label>
-									<input class="form-control" type="text" name="power" id="power2" th:text="*{power}">
-								</div>
-								<div class="form-group">
-									<label for="fuel2">Rodzaj paliwa</label>
-									<ul id="fuel2" class="list-inline">
-										<li th:each="f : ${fuels}" class="list-inline-item">
-											<input type="radio" name="fuelType" th:field="*{fuelType}" th:value="${f}"/>
-											<label th:text="${f}"></label>
-										</li>
-									</ul>
-								</div>
-								<div class="form-group">
-									<label for="price">Cena</label>
-									<input class="form-control" type="text" name="price" id="price" th:text="*{price}">
-								</div>
+    <div class="row">
+        <div class="col-md-2 offset-md-5">
 
-								<div class="form-group">
-									<label for="sellerId">ID sprzedającego</label>
-									<input class="form-control" type="text" name="lastOwnerId" id="sellerId" th:text="*{lastOwnerId}">
-								</div>
-								<div class="form-group">
-									<label for="photo2">Zdjęcie</label>
-									<input class="form-control" type="text" name="photoPath" id="photo2" th:text="*{photoPath}">
-								</div>
-								<div class="form-group">
-									<label for="accident2">Bezwypadkowy</label>
-									<input class="form-control" type="text" name="accidents" id="accident2" th:text="*{accidents}">
-								</div>
-								<div class="modal-footer">
-									<button class="btn btn-primary" data-dismiss="modal">Anuluj</button>
-									<button class="btn btn-primary" type="submit">Potwierdz</button>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>	
-			<div class="modal" id="editModal" tabindex="-1">
-				<div class="modal-dialog modal-sm">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button class="close" data-dismiss="modal">&times;</button>
-						</div>
-						<div class="modal-body">
-							<form>
-								<div class="form-group">
-									<label for="ID">ID Pojazdu</label>
-									<input class="form-control" type="text" id="ID"></input>
-								</div>
-								<div class="form-group">
-									<label for="Brand">Marka</label>
-									<input class="form-control" type="text" id="Brand"></input>
-								</div>
-								<div class="form-group">
-									<label for="Model">Model</label>
-									<input class="form-control" type="text" id="Model"></input>
-								</div>
-								<div class="form-group">
-									<label for="Mileage">Przebieg</label>
-									<input class="form-control" type="text" id="Mileage"></input>
-								</div>
-								<div class="form-group">
-									<label for="Year">Rok Produkcji</label>
-									<input class="form-control" type="text" id="Year"></input>
-								</div>
-								<div class="form-group">
-									<label for="EngineCapacity">Pojemność Silnika</label>
-									<input class="form-control" type="text" id="EngineCapacity"></input>
-								</div>
-								<div class="form-group">
-									<label for="Power">Moc Silnika</label>
-									<input class="form-control" type="text" id="Power"></input>
-								</div>
-								<div class="form-group">
-									<label for="Fuel">Rodzaj Paliwa</label>
-									<input class="form-control" type="text" id="Fuel"></input>
-								</div>
-								<div class="form-group">
-									<label for="Prize">Cena</label>
-									<input class="form-control" type="text" id="Prize"></input>
-								</div>
-								<div class="form-group">
-									<label for="Date">Data Wystawienia</label>
-									<input class="form-control" type="text" id="Date"></input>
-								</div>
-								<div class="form-group">
-									<label for="Seller">ID sprzedającego</label>
-									<input class="form-control" type="text" id="Seller"></input>
-								</div>
-								<div class="form-group">
-									<label for="Photo">Zdjęcie</label>
-									<input class="form-control" type="text" id="Photo"></input>
-								</div>
-								<div class="form-group">
-									<label for="Accident">Bezwypadkowy</label>
-									<input class="form-control" type="text" id="Accident"></input>
-								</div>
-							</form>
-						</div>
-						<div class="modal-footer">
-							<button class="btn btn-primary" data-dismiss="modal">Anuluj</button>
-							<button class="btn btn-primary">Potwierdz</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button class="btn btn-success" data-target="#addModal" data-toggle="modal">Dodaj</button>
+                <button class="btn btn-warning" data-target="#editModal" data-toggle="modal">Modyfikuj</button>
+                <button class="btn btn-danger" data-target="#deleteModal" data-toggle="modal">Usuń</button>
+            </div>
+
+            <div class="modal" id="addModal" tabindex="-1">
+
+
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <form th:action="@{/employee/cars/add}" th:method="post" th:object="${carAdd}">
+                                <!--<input class="form-control" type="text" name="id" id="id3" th:text="*{id}" hidden="hidden">
+                                <input class="form-control" type="text" name="date" id="publishmentDate" th:text="*{publishmentDate}" hidden="hidden">
+                                <input class="form-control" type="text" name="loName" id="loName" th:text="*{lastOwnerName}" hidden="hidden">
+                                <input class="form-control" type="text" name="loSurname" id="loSurname" th:text="*{lastOwnerSurname}" hidden="hidden">
+                                <input class="form-control" type="text" name="loId" id="loId" th:text="*{lastOwnerId}" hidden="hidden">-->
+                                <div class="form-group">
+                                    <label for="mark">Marka</label>
+                                    <input class="form-control" type="text" name="mark" id="mark" th:text="*{mark}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="model2">Model</label>
+                                    <input class="form-control" type="text" name="model" id="model2" th:text="*{model}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="mileage2">Przebieg (km)</label>
+                                    <input class="form-control" type="text" name="mileage" id="mileage2"
+                                           th:text="*{mileage}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="year2">Rok produkcji</label>
+                                    <input class="form-control" type="text" name="productionYear" id="year2"
+                                           th:text="*{productionYear}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="engine2">Pojemność silnika (l.)</label>
+                                    <input class="form-control" type="text" name="engineCapacity" id="engine2"
+                                           th:text="*{engineCapacity}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="power2">Moc (KM)</label>
+                                    <input class="form-control" type="text" name="power" id="power2" th:text="*{power}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="fuel2">Rodzaj paliwa</label>
+                                    <select class="form-control" id="fuel2" th:field="*{fuelType}">
+                                        <option th:each="f : ${fuels}" th:value="${f}"
+                                                th:text="${f.name().toLowerCase()}"></option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="price">Cena</label>
+                                    <input class="form-control" type="text" name="price" id="price" th:text="*{price}">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="sellerId">ID sprzedającego</label>
+                                    <input class="form-control" type="text" name="lastOwnerId" id="sellerId"
+                                           th:text="*{lastOwnerId}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="photo2">Zdjęcie</label>
+                                    <input class="form-control" type="text" name="photoPath" id="photo2"
+                                           th:text="*{photoPath}">
+                                </div>
+
+                                <div>
+                                    <ul>
+                                        <li>
+                                            <label th:for="${'bezwyp'}" th:text="${'bezwypadkowy   '}"></label>
+                                            <input id="bezwyp" type="radio" th:field="*{accidents}"
+                                                   th:value="${'bezwypadkowy'}"/>
+                                        </li>
+                                    </ul>
+                                </div>
+
+
+                                <div class="modal-footer">
+                                    <button class="btn btn-block btn-primary" type="submit">Potwierdź</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="editModal" tabindex="-1">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <form th:action="@{/employee/cars/update}" th:method="post" th:object="${carAdd}">
+                                <div class="form-group">
+                                    <label for="idUpdate">ID samochodu</label>
+                                    <input class="form-control" type="text" name="id" id="idUpdate" th:text="*{id}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="markUpdate">Marka</label>
+                                    <input class="form-control" type="text" name="mark" id="markUpdate"
+                                           th:text="*{mark}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="modelUpdate">Model</label>
+                                    <input class="form-control" type="text" name="model" id="modelUpdate"
+                                           th:text="*{model}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="mileageUpdate">Przebieg (km)</label>
+                                    <input class="form-control" type="text" name="mileage" id="mileageUpdate"
+                                           th:text="*{mileage}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="yearUpdate">Rok produkcji</label>
+                                    <input class="form-control" type="text" name="productionYear" id="yearUpdate"
+                                           th:text="*{productionYear}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="engineUpdate">Pojemność silnika (l.)</label>
+                                    <input class="form-control" type="text" name="engineCapacity" id="engineUpdate"
+                                           th:text="*{engineCapacity}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="powerUpdate">Moc (KM)</label>
+                                    <input class="form-control" type="text" name="power" id="powerUpdate"
+                                           th:text="*{power}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="fuelUpdate">Rodzaj paliwa</label>
+                                    <select class="form-control" id="fuelUpdate" th:field="*{fuelType}">
+                                        <option th:each="f : ${fuels}" th:value="${f}"
+                                                th:text="${f.name().toLowerCase()}"></option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="priceUpdate">Cena</label>
+                                    <input class="form-control" type="text" name="price" id="priceUpdate"
+                                           th:text="*{price}">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="sellerIdUpdate">ID sprzedającego</label>
+                                    <input class="form-control" type="text" name="lastOwnerId" id="sellerIdUpdate"
+                                           th:text="*{lastOwnerId}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="photoUpdate">Zdjęcie</label>
+                                    <input class="form-control" type="text" name="photoPath" id="photoUpdate"
+                                           th:text="*{photoPath}">
+                                </div>
+
+                                <div>
+                                    <ul>
+                                        <li>
+                                            <label th:for="${'bezwypUpdate'}" th:text="${'bezwypadkowy  '}"></label>
+                                            <input id="bezwypUpdate" type="radio" th:field="*{accidents}"
+                                                   th:value="${'bezwypadkowy'}"/>
+                                        </li>
+                                    </ul>
+                                </div>
+
+
+                                <div class="modal-footer">
+                                    <button class="btn btn-primary" type="submit">Potwierdź</button>
+                                    <button class="btn btn-warning" data-dismiss="modal">Anuluj</button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="deleteModal" tabindex="-1">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <form th:action="@{/employee/cars/delete/}" method="get">
+                                <div class="form-group" >
+                                    <label for="idDelete">ID samochodu</label>
+                                    <input class="form-control" type="text" name="id" id="idDelete">
+                                </div>
+                                <button class="btn btn-block btn-danger" type="submit" >Usuń</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-
 
 <!-- Search Function-->
 <script type="text/javascript">
-	function getID() {
-	  var input, filter, table, tr, td, i;
-	  input = document.getElementById("myID");
-	  filter = input.value.toUpperCase();
-	  table = document.getElementById("myTable");
-	  tr = table.getElementsByTagName("tr");
-	  for (i = 0; i < tr.length; i++) {
-		td = tr[i].getElementsByTagName("td")[0];
-		if (td) {
-		  if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-			tr[i].style.display = "";
-		  } else {
-			tr[i].style.display = "none";
-		  }
-		}
-	  }
-	}
-	</script>
+    function getID() {
+        var input, filter, table, tr, td, i;
+        input = document.getElementById("myID");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+                if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
 
-	<script type="text/javascript">
-	function getBrand() {
-	  var input, filter, table, tr, td, i;
-	  input = document.getElementById("myBrand");
-	  filter = input.value.toUpperCase();
-	  table = document.getElementById("myTable");
-	  tr = table.getElementsByTagName("tr");
-	  for (i = 0; i < tr.length; i++) {
-		td = tr[i].getElementsByTagName("td")[1];
-		if (td) {
-		  if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-			tr[i].style.display = "";
-		  } else {
-			tr[i].style.display = "none";
-		  }
-		}
-	  }
-	}
-	</script>
-
-
-	<script type="text/javascript">
-	function getModel() {
-	  var input, filter, table, tr, td, i;
-	  input = document.getElementById("myModel");
-	  filter = input.value.toUpperCase();
-	  table = document.getElementById("myTable");
-	  tr = table.getElementsByTagName("tr");
-	  for (i = 0; i < tr.length; i++) {
-		td = tr[i].getElementsByTagName("td")[2];
-		if (td) {
-		  if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-			tr[i].style.display = "";
-		  } else {
-			tr[i].style.display = "none";
-		  }
-		}
-	  }
-	}
-	</script>
-
-
-	<script type="text/javascript">
-	function getMileage() {
-	  var input, filter, table, tr, td, i;
-	  input = document.getElementById("myMileage");
-	  filter = input.value.toUpperCase();
-	  table = document.getElementById("myTable");
-	  tr = table.getElementsByTagName("tr");
-	  for (i = 0; i < tr.length; i++) {
-		td = tr[i].getElementsByTagName("td")[3];
-		if (td) {
-		  if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-			tr[i].style.display = "";
-		  } else {
-			tr[i].style.display = "none";
-		  }
-		}
-	  }
-	}
-	</script>
-
-	<script type="text/javascript">
-	function getYear() {
-	  var input, filter, table, tr, td, i;
-	  input = document.getElementById("myYear");
-	  filter = input.value.toUpperCase();
-	  table = document.getElementById("myTable");
-	  tr = table.getElementsByTagName("tr");
-	  for (i = 0; i < tr.length; i++) {
-		td = tr[i].getElementsByTagName("td")[4];
-		if (td) {
-		  if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-			tr[i].style.display = "";
-		  } else {
-			tr[i].style.display = "none";
-		  }
-		}
-	  }
-	}
-	</script>
-
-
-	<script type="text/javascript">
-	function getEngineCapacity() {
-	  var input, filter, table, tr, td, i;
-	  input = document.getElementById("myEngineCapacity");
-	  filter = input.value.toUpperCase();
-	  table = document.getElementById("myTable");
-	  tr = table.getElementsByTagName("tr");
-	  for (i = 0; i < tr.length; i++) {
-		td = tr[i].getElementsByTagName("td")[5];
-		if (td) {
-		  if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-			tr[i].style.display = "";
-		  } else {
-			tr[i].style.display = "none";
-		  }
-		}
-	  }
-	}
-	</script>
+<script type="text/javascript">
+    function getBrand() {
+        var input, filter, table, tr, td, i;
+        input = document.getElementById("myBrand");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[1];
+            if (td) {
+                if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
 
 
 <script type="text/javascript">
-	function getPower() {
-	  var input, filter, table, tr, td, i;
-	  input = document.getElementById("myPower");
-	  filter = input.value.toUpperCase();
-	  table = document.getElementById("myTable");
-	  tr = table.getElementsByTagName("tr");
-	  for (i = 0; i < tr.length; i++) {
-		td = tr[i].getElementsByTagName("td")[6];
-		if (td) {
-		  if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-			tr[i].style.display = "";
-		  } else {
-			tr[i].style.display = "none";
-		  }
-		}
-	  }
-	}
-	</script>
+    function getModel() {
+        var input, filter, table, tr, td, i;
+        input = document.getElementById("myModel");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[2];
+            if (td) {
+                if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
 
 
+<script type="text/javascript">
+    function getMileage() {
+        var input, filter, table, tr, td, i;
+        input = document.getElementById("myMileage");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[3];
+            if (td) {
+                if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
+
+<script type="text/javascript">
+    function getYear() {
+        var input, filter, table, tr, td, i;
+        input = document.getElementById("myYear");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[4];
+            if (td) {
+                if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
 
 
-		<script type="text/javascript">
-	function getFuel() {
-	  var input, filter, table, tr, td, i;
-	  input = document.getElementById("myFuel");
-	  filter = input.value.toUpperCase();
-	  table = document.getElementById("myTable");
-	  tr = table.getElementsByTagName("tr");
-	  for (i = 0; i < tr.length; i++) {
-		td = tr[i].getElementsByTagName("td")[7];
-		if (td) {
-		  if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-			tr[i].style.display = "";
-		  } else {
-			tr[i].style.display = "none";
-		  }
-		}
-	  }
-	}
-	</script>
+<script type="text/javascript">
+    function getEngineCapacity() {
+        var input, filter, table, tr, td, i;
+        input = document.getElementById("myEngineCapacity");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[5];
+            if (td) {
+                if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
 
 
-	<script type="text/javascript">
-	function getPrize() {
-	  var input, filter, table, tr, td, i;
-	  input = document.getElementById("myPrize");
-	  filter = input.value.toUpperCase();
-	  table = document.getElementById("myTable");
-	  tr = table.getElementsByTagName("tr");
-	  for (i = 0; i < tr.length; i++) {
-		td = tr[i].getElementsByTagName("td")[8];
-		if (td) {
-		  if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-			tr[i].style.display = "";
-		  } else {
-			tr[i].style.display = "none";
-		  }
-		}
-	  }
-	}
-	</script>
+<script type="text/javascript">
+    function getPower() {
+        var input, filter, table, tr, td, i;
+        input = document.getElementById("myPower");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[6];
+            if (td) {
+                if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
 
 
-	<script type="text/javascript">
-	function getDate() {
-	  var input, filter, table, tr, td, i;
-	  input = document.getElementById("myDate");
-	  filter = input.value.toUpperCase();
-	  table = document.getElementById("myTable");
-	  tr = table.getElementsByTagName("tr");
-	  for (i = 0; i < tr.length; i++) {
-		td = tr[i].getElementsByTagName("td")[9];
-		if (td) {
-		  if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-			tr[i].style.display = "";
-		  } else {
-			tr[i].style.display = "none";
-		  }
-		}
-	  }
-	}
-	</script>
+<script type="text/javascript">
+    function getFuel() {
+        var input, filter, table, tr, td, i;
+        input = document.getElementById("myFuel");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[7];
+            if (td) {
+                if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
 
 
-	<script type="text/javascript">
-	function getSeller() {
-	  var input, filter, table, tr, td, i;
-	  input = document.getElementById("mySeller");
-	  filter = input.value.toUpperCase();
-	  table = document.getElementById("myTable");
-	  tr = table.getElementsByTagName("tr");
-	  for (i = 0; i < tr.length; i++) {
-		td = tr[i].getElementsByTagName("td")[10];
-		if (td) {
-		  if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-			tr[i].style.display = "";
-		  } else {
-			tr[i].style.display = "none";
-		  }
-		}
-	  }
-	}
-	</script>
+<script type="text/javascript">
+    function getPrize() {
+        var input, filter, table, tr, td, i;
+        input = document.getElementById("myPrize");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[8];
+            if (td) {
+                if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
 
 
-	<script type="text/javascript">
-	function getPhoto() {
-	  var input, filter, table, tr, td, i;
-	  input = document.getElementById("myPhoto");
-	  filter = input.value.toUpperCase();
-	  table = document.getElementById("myTable");
-	  tr = table.getElementsByTagName("tr");
-	  for (i = 0; i < tr.length; i++) {
-		td = tr[i].getElementsByTagName("td")[11];
-		if (td) {
-		  if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-			tr[i].style.display = "";
-		  } else {
-			tr[i].style.display = "none";
-		  }
-		}
-	  }
-	}
-	</script>
+<script type="text/javascript">
+    function getDate() {
+        var input, filter, table, tr, td, i;
+        input = document.getElementById("myDate");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[9];
+            if (td) {
+                if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
 
 
-	<script type="text/javascript">
-	function getAccident() {
-	  var input, filter, table, tr, td, i;
-	  input = document.getElementById("myAccident");
-	  filter = input.value.toUpperCase();
-	  table = document.getElementById("myTable");
-	  tr = table.getElementsByTagName("tr");
-	  for (i = 0; i < tr.length; i++) {
-		td = tr[i].getElementsByTagName("td")[12];
-		if (td) {
-		  if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-			tr[i].style.display = "";
-		  } else {
-			tr[i].style.display = "none";
-		  }
-		}
-	  }
-	}
-	</script>
+<script type="text/javascript">
+    function getSeller() {
+        var input, filter, table, tr, td, i;
+        input = document.getElementById("mySeller");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[10];
+            if (td) {
+                if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
 
 
-	<!-- Sort Function-->
-	<script type="text/javascript">
-	function sortTable(n) {
-	  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-	  table = document.getElementById("myTable");
-	  switching = true;
-	  // Set the sorting direction to ascending:
-	  dir = "asc";
-	  /* Make a loop that will continue until
-	  no switching has been done: */
-	  while (switching) {
-		// Start by saying: no switching is done:
-		switching = false;
-		rows = table.rows;
-		/* Loop through all table rows (except the
-		first, which contains table headers): */
-		for (i = 1; i < (rows.length - 1); i++) {
-		  // Start by saying there should be no switching:
-		  shouldSwitch = false;
-		  /* Get the two elements you want to compare,
-		  one from current row and one from the next: */
-		  x = rows[i].getElementsByTagName("td")[n];
-		  y = rows[i + 1].getElementsByTagName("td")[n];
-		  /* Check if the two rows should switch place,
-		  based on the direction, asc or desc: */
-		  if (dir == "asc") {
-			if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-			  // If so, mark as a switch and break the loop:
-			  shouldSwitch = true;
-			  break;
-			}
-		  } else if (dir == "desc") {
-			if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-			  // If so, mark as a switch and break the loop:
-			  shouldSwitch = true;
-			  break;
-			}
-		  }
-		}
-		if (shouldSwitch) {
-		  /* If a switch has been marked, make the switch
-		  and mark that a switch has been done: */
-		  rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-		  switching = true;
-		  // Each time a switch is done, increase this count by 1:
-		  switchcount ++;
-		} else {
-		  /* If no switching has been done AND the direction is "asc",
-		  set the direction to "desc" and run the while loop again. */
-		  if (switchcount == 0 && dir == "asc") {
-			dir = "desc";
-			switching = true;
-		  }
-		}
-	  }
-	}
-	</script>
+<script type="text/javascript">
+    function getPhoto() {
+        var input, filter, table, tr, td, i;
+        input = document.getElementById("myPhoto");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[11];
+            if (td) {
+                if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
+
+
+<script type="text/javascript">
+    function getAccident() {
+        var input, filter, table, tr, td, i;
+        input = document.getElementById("myAccident");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[12];
+            if (td) {
+                if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
+
+
+<!-- Sort Function-->
+<script type="text/javascript">
+    function sortTable(n) {
+        var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+        table = document.getElementById("myTable");
+        switching = true;
+        // Set the sorting direction to ascending:
+        dir = "asc";
+        /* Make a loop that will continue until
+        no switching has been done: */
+        while (switching) {
+            // Start by saying: no switching is done:
+            switching = false;
+            rows = table.rows;
+            /* Loop through all table rows (except the
+            first, which contains table headers): */
+            for (i = 1; i < (rows.length - 1); i++) {
+                // Start by saying there should be no switching:
+                shouldSwitch = false;
+                /* Get the two elements you want to compare,
+                one from current row and one from the next: */
+                x = rows[i].getElementsByTagName("td")[n];
+                y = rows[i + 1].getElementsByTagName("td")[n];
+                /* Check if the two rows should switch place,
+                based on the direction, asc or desc: */
+                if (dir == "asc") {
+                    if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                        // If so, mark as a switch and break the loop:
+                        shouldSwitch = true;
+                        break;
+                    }
+                } else if (dir == "desc") {
+                    if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                        // If so, mark as a switch and break the loop:
+                        shouldSwitch = true;
+                        break;
+                    }
+                }
+            }
+            if (shouldSwitch) {
+                /* If a switch has been marked, make the switch
+                and mark that a switch has been done: */
+                rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                switching = true;
+                // Each time a switch is done, increase this count by 1:
+                switchcount++;
+            } else {
+                /* If no switching has been done AND the direction is "asc",
+                set the direction to "desc" and run the while loop again. */
+                if (switchcount == 0 && dir == "asc") {
+                    dir = "desc";
+                    switching = true;
+                }
+            }
+        }
+    }
+</script>
+
 </body>
 </html>
 

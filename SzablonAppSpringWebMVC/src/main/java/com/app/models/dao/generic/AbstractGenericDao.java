@@ -3,6 +3,7 @@ package com.app.models.dao.generic;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import javax.transaction.Transactional;
 import java.lang.reflect.ParameterizedType;
 import java.sql.SQLException;
 import java.sql.SQLSyntaxErrorException;
@@ -10,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+@Transactional
 public abstract class AbstractGenericDao<T> implements GenericDao<T> {
 
     @PersistenceContext
@@ -40,8 +42,14 @@ public abstract class AbstractGenericDao<T> implements GenericDao<T> {
     @Override
     public void delete(Long id) {
         if (entityManager != null && id != null){
-            T element = entityManager.find(eClass, id);
-            entityManager.remove(element);
+            System.out.println("USUWANIE " + id);
+            /*T element = entityManager.find(eClass, id);
+            System.out.println(element.toString());
+            entityManager.remove(element);*/
+            Query query = entityManager.createQuery("DELETE FROM " + eClass.getCanonicalName() + " c WHERE c.id = :id");
+            query.setParameter("id", id);
+            int del = query.executeUpdate();
+            System.out.println(del +". rows deleted from " + eClass.getCanonicalName());
         }
     }
 

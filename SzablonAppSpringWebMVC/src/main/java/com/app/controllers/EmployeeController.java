@@ -9,10 +9,7 @@ import com.app.models.dto.converters.CarConverter;
 import com.app.models.enums.FuelType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import javax.persistence.EntityManager;
 import javax.transaction.Transactional;
@@ -92,17 +89,17 @@ public class EmployeeController {
         return "employee/carsEmployeeView";
     }
 
-    @Transactional
-    @PostMapping("/carsList")
+    @PostMapping("/cars/add")
     public String addCar(@ModelAttribute CarDto carDto) {
         CarConverter carConverter = new CarConverter();
         Car car = carConverter.carDtoToCar(carDto);
-
         try {
             car.setLastOwner(clientDao.findById(carDto.getLastOwnerId()).orElseThrow(NullPointerException::new));
         } catch (NullPointerException e) {
             System.out.println(e.getMessage());
+            System.out.println("PODANE ID KLIENTA NIE ISTNIEJE W BAZIE - NIE DODANO!");
             car.setLastOwner(null);
+            return "redirect:/employee/carsList";
         }
 
         try {
@@ -117,6 +114,49 @@ public class EmployeeController {
         carDao.insert(car);
         return "redirect:/employee/carsList";
     }
+
+    @GetMapping("/cars/delete")
+    public String deleteCar(@RequestParam Long id){
+            try{
+                carDao.delete(id);
+            }catch (NullPointerException e){
+                System.out.println(e.getMessage());
+            }
+        return "redirect:/employee/carsList";
+    }
+
+
+    @PostMapping("/cars/update")
+    public String updateCar(@ModelAttribute CarDto carDto){
+        CarConverter carConverter = new CarConverter();
+        Car car = carConverter.carDtoToCar(carDto);
+
+        try {
+            car.setMarkModel(markModelDao.findByMarkAndModel(carDto.getMark(), carDto.getModel()).orElseThrow(NullPointerException::new));
+        } catch (NullPointerException e) {
+            System.out.println(e.getMessage());
+            markModelDao.insert(car.getMarkModel());
+            car.setMarkModel(markModelDao.findByMarkAndModel(car.getMarkModel().getMark(),car.getMarkModel().getModel()).orElse(null));
+        }
+
+        try {
+            car.setLastOwner(clientDao.findById(carDto.getLastOwnerId()).orElseThrow(NullPointerException::new));
+        } catch (NullPointerException e) {
+            System.out.println(e.getMessage());
+            System.out.println("PODANE ID KLIENTA NIE ISTNIEJE W BAZIE - BRAK MODYFIKCAJI!");
+            return "redirect:/employee/carsList";
+        }
+
+        try{
+            car.setPublishmentDate(carDao.findById(carDto.getId()).orElseThrow(NullPointerException::new).getPublishmentDate());
+        }catch (NullPointerException e){
+            System.out.println(e.getMessage());
+        }
+
+        carDao.update(car);
+        return "redirect:/employee/carsList";
+    }
+
 
     @RequestMapping("/clients")
     public String clientsForm() {
