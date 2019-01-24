@@ -115,6 +115,18 @@ public class EmployeeController {
         return "redirect:/employee/carsList";
     }
 
+    @GetMapping("/cars/delete/{id}")
+    public String deleteCar(@PathVariable Long id){
+        try{
+            carDao.delete(id);
+        }catch (NullPointerException e){
+            System.out.println(e.getMessage());
+        }
+        return "redirect:/employee/carsList";
+    }
+
+    /*//RequestParam will change the url to /cars/delete?id=xyz
+    // where xyz is given in html form and submitted
     @GetMapping("/cars/delete")
     public String deleteCar(@RequestParam Long id){
             try{
@@ -123,11 +135,21 @@ public class EmployeeController {
                 System.out.println(e.getMessage());
             }
         return "redirect:/employee/carsList";
+    }*/
+
+
+    @GetMapping("/cars/update/{id}")
+    public String updateCar(@PathVariable Long id, Model model){
+        CarConverter carConverter = new CarConverter();
+        CarDto carDto = carConverter.carToCarDto(carDao.findById(id).orElseThrow(NullPointerException::new));
+
+       model.addAttribute("car", carDto);
+       model.addAttribute("fuels", FuelType.values());
+       return "/employee/updateCar";
     }
 
-
-    @PostMapping("/cars/update")
-    public String updateCar(@ModelAttribute CarDto carDto){
+    @PostMapping("/cars/update/{id}")
+    public String updateCar(@ModelAttribute CarDto carDto, @PathVariable Long id){
         CarConverter carConverter = new CarConverter();
         Car car = carConverter.carDtoToCar(carDto);
 
