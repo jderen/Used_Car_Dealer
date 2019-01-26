@@ -18,7 +18,7 @@ public class Transaction {
     @Id
     @GeneratedValue
     Long id;
-    BigDecimal price;
+    Double price;
     @Column(name = "transaction_name")
     LocalDate transactionDate;
     @ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
@@ -39,6 +39,7 @@ public class Transaction {
                 ", transactionDate=" + transactionDate +
                 ", employee=" + employee.id +
                 ", car=" + car.id +
+                ", client=" + client.id +
                 '}';
     }
 }
