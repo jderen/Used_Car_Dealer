@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>Komis Samochodowy</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="/">Strona główna</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="/employee/">Zaloguj</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<br>
+<!-- Navigation Bar -->
+
+<div class="container">
+	<div class ="row">
+		<div class="col-md-8 offset-md-2">
+			<input type="text" id="myBrand" onkeyup="getBrand()" placeholder="Marka">
+			<input type="text" id="myModel" onkeyup="getModel()" placeholder="Model">
+			<input type="text" id="myEngine" onkeyup="getEngine()" placeholder="Pojemność silnika">
+			<input type="text" id="myFuel" onkeyup="getFuel()" placeholder="Rodzja paliwa">
+			<input type="text" id="myPower" onkeyup="getPower()" placeholder="Moc">
+			<input type="text" id="myMileage" onkeyup="getMileage()" placeholder="Przebieg">
+			<div class="input-group">
+				<div class="input-group-prepend">
+					<span class="input-group-text" id="">Cena</span>
+				</div>
+				<input type="text" id="myPriceFrom" onkeyup="getPriceFrom()" placeholder="od">
+				<input type="text" id="myPriceTo" onkeyup="getPriceTo()" placeholder="do">
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- Cars list -->
+
+<div class="row">
+	<div class="col-md-8 offset-md-2">
+		<table th:each="c : ${cars}" class="table" id="myTable">
+			<tbody>
+			<tr>
+				<td width="15%" rowspan="3">
+
+					<img th:src="@{/static/img/{name}(name=${c.photoPath})}" alt="nie ma obrazka"/>
+				</td>
+				<td colspan="2">
+					<h1 th:text="${c.mark} + ' ' + ${c.model}" class="font-weight-bold text-uppercase"></h1>
+
+				</td>
+				<td align="right">
+					<h3 th:text="'Cena: ' + ${c.price} + ' zł'" class="font-weight-bold align-items-center"></h3>
+				</td>
+			</tr>
+			<tr>
+				<td width="25%">
+					<h5 th:text="'Rocznik: ' + ${c.productionYear}" class="font-weight-bold align-items-center"></h5>
+				</td>
+				<td width="20%" >
+					<h6 th:text="'Pojemność silnika: ' + ${c.engineCapacity} + ' l.'" class=" align-items-center"></h6>
+					<h6 th:text="'Rodzaj paliwa: ' + ${c.fuelType}" class=" align-items-center"></h6>
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td width="25%" >
+					<h6 th:text="'Stan: ' + ${c.accidents}" class="font-weight-bold align-items-center"></h6>
+				</td>
+				<td width="20%" >
+					<h6 th:text="'Moc: ' + ${c.power} + ' KM'" class=" align-items-center"></h6>
+					<h6 th:text="'Przebieg: ' + ${c.mileage} + ' km.'" class=" align-items-center"></h6>
+				</td>
+				<td align="right">
+					<h6 th:text="'Data wystawienia oferty: ' + ${c.publishmentDate} + 'r.'" class=" align-items-center"></h6>
+					<h6 th:text="'Sprzedajacy: ' + ${c.lastOwnerName.substring(0,3)} + '*** ' + ${c.lastOwnerSurname.substring(0,3)} + '***'"></h6>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<a class="btn btn-block btn-success" th:href="@{/{id}(id=${c.id})}">Kup auto</a>
+				</td>
+			</tr>
+			</tbody>
+			<br>
+		</table>
+	</div>
+</div>
+
+
+
+
+<script type="text/javascript">
+	function getBrand() {
+		var input, filter, table, tr, td, i;
+		input = document.getElementById("myBrand");
+		filter = input.value.toUpperCase();
+		table = document.getElementById("myTable");
+		tr = table.getElementsByTagName("tr");
+		for (i = 0; i < tr.length; i++) {
+			td = tr[i].getElementsByTagName("td")[0];
+			if (td) {
+				if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+					tr[i].style.display = "";
+				} else {
+					tr[i].style.display = "none";
+				}
+			}
+		}
+	}
+</script>
+
+
+
+
+<!-- Cars list -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

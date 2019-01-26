@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Komis Samochodowy</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">Strona główna</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/employee/">Zaloguj</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<br>
+<!-- Navigation Bar -->
+<div class="container">
+    <div class ="row">
+        <div class="col-md-4 offset-md-4">
+            <form th:action="@{/employee/clients/update/{id}(id=${client.id})}" th:method="post" th:object="${client}">
+                <div class="form-group">
+                    <label for="idUpdate">ID klienta</label>
+                    <input class="form-control" type="text" name="id" id="idUpdate" th:value="*{id}">
+                </div>
+                <div class="form-group">
+                    <label for="nameUpdate">Imię</label>
+                    <input class="form-control" type="text" name="name" id="nameUpdate"
+                           th:value="*{name}">
+                </div>
+                <div class="form-group">
+                    <label for="surnameUpdate">Nazwisko</label>
+                    <input class="form-control" type="text" name="surname" id="surnameUpdate"
+                           th:value="*{surname}">
+                </div>
+                <div class="form-group">
+                    <label for="phoneNumberUpdate">Numer telefonu</label>
+                    <input class="form-control" type="text" name="phoneNumber" id="phoneNumberUpdate"
+                           th:value="*{phoneNumber}">
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="submit">Potwierdź</button>
+                    <button class="btn btn-warning" data-dismiss="modal">Anuluj</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

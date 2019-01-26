@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -43,9 +43,9 @@
 	</nav>
 	<!-- Navigation Bar -->
 	
-	<div class="container" align="center">
+	<div class="container">
 		<div class ="row">
-			<div class="col-md-8 offset-md-2">
+			<div class="col-md-10 offset-md-1">
 			<input type="text" id="myID" onkeyup="getID()" placeholder="ID">
 			<input type="text" id="myName" onkeyup="getName()" placeholder="Imię">
 			<input type="text" id="mySurname" onkeyup="getSurname()" placeholder="Nazwisko">
@@ -54,178 +54,78 @@
 			</div>
 		</div>
 	</div>
-	
-	<div class="container">
-		<div class ="row">
-			<div class="col-md-8 offset-md-2">
-				<div class="table-responsive">
-					<table class="table table-bordered table-hover" id="myTable">
-					  <thead class="thead-light">
-						<thead>
-						<tr>
-							<th onclick="sortTable(0)">ID</th>
-							<th onclick="sortTable(1)">Imię</th>
-							<th onclick="sortTable(2)">Nazwisko</th>
-							<th onclick="sortTable(3)">Numer Telefonu</th>
-							<th onclick="sortTable(4)">Status</th>
-						</tr>
-					  </thead>
-					  <tbody>
-						<tr class="item">
-						  <td>1</td>
-						  <td>Piotr</td>
-						  <td>Nowak</td>
-						  <td>549203842</td>
-						  <td>Sprzedawca</td>
-						</tr>
-						<tr class="item">
-						  <td>2</td>
-						  <td>Marek</td>
-						  <td>Kowalski</td>
-						  <td>430356321</td>
-						  <td>Kupiec</td>
-						</tr>
-						<tr class="item">
-						  <td>3</td>
-						  <td>Marcin</td>
-						  <td>Małysz</td>
-						  <td>325523859</td>
-						  <td>Sprzedawca</td>
-						</tr>
-					  </tbody>
-					</table>
-				</div>
-			</div>
-		</div>
-	</div>
 
-	<div class="container">
-		<div class ="row">
-			<div class="col-md-2 offset-md-5">
-				<div class="btn-group" role="group" aria-label="Basic example">
-					<button class="btn btn-success" data-target="#addModal" data-toggle="modal">Dodaj</button>
-					<button class="btn btn-warning" data-target="#editModal" data-toggle="modal">Edytuj</button>
-					<button class="btn btn-danger" data-target="#deleteModal" data-toggle="modal">Usuń</button>
-				</div>
-				<div class="modal" id="addModal" tabindex="-1">
-					<div class="modal-dialog modal-sm">
-						<div class="modal-content">
-							<div class="modal-header">
-								<button class="close" data-dismiss="modal">&times;</button>
-							</div>
-							<div class="modal-body">
-								<form>
-									<div class="form-group">
-										<label for="inputName">Imię</label>
-										<input class="form-control" type="text" id="Name"></input>
-									</div>
-									<div class="form-group">
-										<label for="inputSurname">Nazwisko</label>
-										<input class="form-control" type="text" id="Surname"></input>
-									</div>
-									<div class="form-group">
-										<label for="inputNumber">Numer Telefonu</label>
-										<input class="form-control" type="text" id="Number"></input>
-									</div>
-									<div class="form-group">
-									</div>
-									<div class="form-group">
-										<label for="inputSurname">Nazwisko</label>
-										<input class="form-control" type="text" id="Surname"></input>
-									</div>
-									<div class="form-group">
-										<label for="inputNumber">Numer Telefonu</label>
-										<input class="form-control" type="text" id="Number"></input>
-									</div>
-									<div class="form-group">
-										<label for="inputStatus">Status</label>
-										<input class="form-control" type="text" id="Status"></input>
-									</div>
-								</form>
-							</div>
-							<div class="modal-footer">
-								<button class="btn btn-primary" data-dismiss="modal">Anuluj</button>
-								<button class="btn btn-primary">Potwierdz</button>
-							</div>
-						</div>
-					</div>
-				</div>	
-				<div class="modal" id="editModal" tabindex="-1">
-				
-					<div class="modal-dialog modal-sm">
-						<div class="modal-content">
-							<div class="modal-header">
-								<button class="close" data-dismiss="modal">&times;</button>
-							</div>
-							<div class="modal-body">
-								<form>
-									<div class="form-group">
-										<label for="inputID">ID Klienta</label>
-										<input class="form-control" type="text" id="ID"></input>
-									</div>
-									<div class="form-group">
-										<label for="inputName">Imię</label>
-										<input class="form-control" type="text" id="Name"></input>
-									</div>
-									<div class="form-group">
-										<label for="inputSurname">Nazwisko</label>
-										<input class="form-control" type="text" id="Surname"></input>
-									</div>
-									<div class="form-group">
-										<label for="inputNumber">Numer Telefonu</label>
-										<input class="form-control" type="text" id="Number"></input>
-									</div>
-									<div class="form-group">
-										<label for="inputStatus">Status</label>
-										<input class="form-control" type="text" id="Status"></input>
-									</div>
-								</form>
-							</div>
-							<div class="modal-footer">
-								<button class="btn btn-primary" data-dismiss="modal">Anuluj</button>
-								<button class="btn btn-primary">Potwierdz</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="modal" id="deleteModal" tabindex="-1">
-						<div class="modal-dialog modal-sm">
-							<div class="modal-content">
-								<div class="modal-header">
-									<button class="close" data-dismiss="modal">&times;</button>
-								</div>
-								<div class="modal-body">
-									<form>
-										<div class="form-group">
-											<label for="inputID">ID Klienta</label>
-											<input class="form-control" type="text" id="ID"></input>
-										</div>
-									</form>
-								</div>
-								<div class="modal-footer">
-									<button class="btn btn-primary" data-dismiss="modal">Anuluj</button>
-									<button class="btn btn-primary">Potwierdz</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-		</div>
+
+
+	<div class="table-responsive">
+		<table class="table table-bordered" id="myTable">
+			<thead class="thead-light">
+			<tr>
+				<th onclick="sortTable(0)">ID</th>
+				<th onclick="sortTable(1)">Imię</th>
+				<th onclick="sortTable(2)">Nazwisko</th>
+				<th onclick="sortTable(3)">Numer Telefonu</th>
+				<th onclick="sortTable(4)">Status</th>
+
+			</tr>
+			</thead>
+			<tbody>
+			<tr class="item" th:each="c : ${clients}">
+				<td th:text="${c.id}"></td>
+				<td th:text="${c.name}"></td>
+				<td th:text="${c.surname}"></td>
+				<td th:text="${c.phoneNumber}"></td>
+				<td>
+					<a class="btn btn-warning" th:href="@{/employee/clients/update/{id}(id = ${c.id})}">Modyfikuj</a>
+					<a class="btn btn-danger" th:href="@{/employee/clients/delete/{id}(id = ${c.id})}">Usuń</a>
+				</td>
+			</tr>
+			</tbody>
+		</table>
 	</div>
 
 
-
-	<!-- Button "Usuń"-->
 	<div class="container">
-		<div class ="row">
-			<div class="col-md-8 offset-md-5">
-				
-					
+		<div class="row">
+			<div class="col-md-4 offset-md-4">
+				<button class="btn btn-success btn-block move-button" data-target="#addModal" data-toggle="modal">Dodaj nowego klienta</button>
 			</div>
 		</div>
 	</div>
 
 
+
+
+
+	<div class="modal" id="addModal" tabindex="-1">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body">
+					<form th:action="@{/employee/clients/add}" th:method="post" th:object="${clientAdd}">
+						<div class="form-group">
+							<label for="name2">Imię</label>
+							<input class="form-control" type="text" name="name" id="name2" th:text="*{name}">
+						</div>
+						<div class="form-group">
+							<label for="surname2">Model</label>
+							<input class="form-control" type="text" name="surname" id="surname2" th:text="*{surname}">
+						</div>
+						<div class="form-group">
+							<label for="phoneNumber2">Przebieg (km)</label>
+							<input class="form-control" type="text" name="phoneNumber" id="phoneNumber2"
+								   th:text="*{phoneNumber}">
+						</div>
+						<div class="modal-footer">
+							<button class="btn btn-block btn-primary" type="submit">Potwierdź</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
 
 
 
