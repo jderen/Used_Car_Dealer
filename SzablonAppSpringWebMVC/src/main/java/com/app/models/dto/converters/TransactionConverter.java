@@ -8,7 +8,12 @@ import com.app.models.dao.ClientDao;
 import com.app.models.dao.*;
 import com.app.models.dto.CarDto;
 import com.app.models.dto.TransactionDto;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+
+@Data
+@NoArgsConstructor
 public class TransactionConverter {
     private ClientDao clientDao;
     private CarDao carDao;
@@ -46,9 +51,10 @@ public class TransactionConverter {
                 .id(transactionDto.getId())
                 .price(transactionDto.getPrice())
                 .transactionDate(transactionDto.getTransactionDate())
-                .employeeId(new Employee(transactionDto.getEmployeeId(),null,null,null,null,null,null,null,null))
-                .carId(new Car(transactionDto.getCarId(),null,null,null,null,null,null,null,null,null,null,null))
-                .clientId(new Client(transactionDto.getClientId(),null,null,null,null,null))
+                .employee(new Employee(transactionDto.getEmployeeId(),null,null,null,null,null,null,null,null))
+                .car(new Car(transactionDto.getCarId(),null,null,null,null,null,null,null,null,null,null,null))
+                .client(new Client(transactionDto.getClientId(),null,null,null,null,null))
                 .build();
+
     }
 }
