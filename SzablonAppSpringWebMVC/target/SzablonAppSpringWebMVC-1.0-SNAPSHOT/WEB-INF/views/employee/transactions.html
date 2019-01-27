@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -50,174 +50,99 @@
 				<input type="text" id="myID" onkeyup="getID()" placeholder="ID">
 				<input type="text" id="myAmount" onkeyup="getAmount()" placeholder="Kwota">
 				<input type="text" id="myDate" onkeyup="getDate()" placeholder="Data transakcji">
-				<input type="text" id="myBuyer" onkeyup="getBuyer()" placeholder="ID Kupca">
 				<input type="text" id="myWorker" onkeyup="getWorker()" placeholder="ID Pracownika">
-				<input type="text" id="myCar" onkeyup="getCar()" placeholder="ID pojazdu">
+				<input type="text" id="myCar" onkeyup="getCar()" placeholder="ID Pojazdu">
+				<input type="text" id="myBuyer" onkeyup="getBuyer()" placeholder="ID Klienta">
 			</div>
 		</div>
 	</div>	
 	</br>
-	
+
+
+	<div class="table-responsive">
+		<table class="table table-bordered" id="myTable">
+			<thead class="thead-light">
+			<tr>
+				<th onclick="sortTable(0)">ID</th>
+				<th onclick="sortTable(1)">Kwota</th>
+				<th onclick="sortTable(2)">Data transakcji</th>
+				<th onclick="sortTable(3)">ID Pracownika</th>
+				<th onclick="sortTable(4)">ID Pojazdu</th>
+				<th onclick="sortTable(5)">ID Klienta</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr class="item" th:each="t : ${transactions}">
+				<td th:text="${t.id}"></td>
+				<td th:text="${t.price}"></td>
+				<td th:text="${t.transactionDate}"></td>
+				<td th:text="${t.employeeId}"></td>
+				<td th:text="${t.carId}"></td>
+				<td th:text="${t.clientId}"></td>
+				<td>
+					<a class="btn btn-warning" th:href="@{/employee/transactions/update/{id}(id = ${c.id})}">Modyfikuj</a>
+					<a class="btn btn-danger" th:href="@{/employee/transactions/delete/{id}(id = ${c.id})}">Usuń</a>
+				</td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+
+
+
 	<div class="container">
-		<div class ="row">
-			<div class="col-md-10 offset-md-1">
-				<div class="table-responsive">
-					<table class="table table-bordered table-hover" id="myTable">
-					  <thead class="thead-light">
-						<thead>
-						<tr>
-					<th onclick="sortTable(0)">ID</th>
-					<th onclick="sortTable(1)">Kwota</th>
-					<th onclick="sortTable(2)">Data transakcji</th>
-					<th onclick="sortTable(3)">ID Kupca</th>
-					<th onclick="sortTable(4)">ID pracownika</th>
-					<th onclick="sortTable(5)">ID pojazdu</th>
-						</tr>
-					  </thead>
-					  <tbody>
-						<tr class="item">
-						  <td>1</td>
-						  <td>10500</td>
-						  <td>10-10-2018</td>
-						  <td>1</td>
-						  <td>1</td>
-						  <td>1</td>
-						</tr>
-						<tr class="item">
-						  <td>2</td>
-						  <td>20493</td>
-						  <td>10-11-2018</td>
-						  <td>1</td>
-						  <td>3</td>
-						  <td>3</td>
-						</tr>
-						<tr class="item">
-						  <td>3</td>
-						  <td>382137</td>
-						  <td>10-10-2017</td>
-						  <td>2</td>
-						  <td>2</td>
-						  <td>2</td>
-						</tr>
-					  </tbody>
-					</table>
-				</div>
+		<div class="row">
+			<div class="col-md-4 offset-md-4">
+				<button class="btn btn-success btn-block move-button" data-target="#addModal" data-toggle="modal">Dodaj nowa transakcje</button>
 			</div>
 		</div>
-	</div>	
-	
+	</div>
 
-<div class="container">
-		<div class ="row">
-			<div class="col-md-2 offset-md-5">
-				<div class="btn-group" role="group" aria-label="Basic example">
-					<button class="btn btn-success" data-target="#addModal" data-toggle="modal">Dodaj</button>
-					<button class="btn btn-warning" data-target="#editModal" data-toggle="modal">Edytuj</button>
-					<button class="btn btn-danger" data-target="#deleteModal" data-toggle="modal">Usuń</button>
-				</div>
-				<div class="modal" id="addModal" tabindex="-1">
 
-				<div class="modal-dialog modal-sm">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button class="close" data-dismiss="modal">&times;</button>
-						</div>
-						<div class="modal-body">
-							<form>
-								<div class="form-group">
-									<label for="inputAmount">Kwota</label>
-									<input class="form-control" type="text" id="Amount"></input>
-								</div>
-								<div class="form-group">
-									<label for="inputDate">Data transakcji</label>
-									<input class="form-control" type="text" id="Date"></input>
-								</div>
-								<div class="form-group">
-									<label for="inputBuyer">ID Kupca</label>
-									<input class="form-control" type="text" id="Buyer"></input>
-								</div>
-								<div class="form-group">
-									<label for="inputWorker">ID Pracownika</label>
-									<input class="form-control" type="text" id="Worker"></input>
-								</div>
-								<div class="form-group">
-									<label for="inputCar">ID Pojazdu</label>
-									<input class="form-control" type="text" id="Car"></input>
-								</div>
-							</form>
-						</div>
-						<div class="modal-footer">
-							<button class="btn btn-primary" data-dismiss="modal">Anuluj</button>
-							<button class="btn btn-primary">Potwierdz</button>
-						</div>
-					</div>
+	<div class="modal" id="addModal" tabindex="-1">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button class="close" data-dismiss="modal">&times;</button>
 				</div>
-			</div>	
-				<div class="modal" id="editModal" tabindex="-1">
-				<div class="modal-dialog modal-sm">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button class="close" data-dismiss="modal">&times;</button>
+				<div class="modal-body">
+					<form th:action="@{/employee/transactions/add}" th:method="post" th:object="${transactionAdd}">
+						<div class="form-group">
+							<label for="price2">Kwota</label>
+							<input class="form-control" type="text" name="price" id="price2" th:text="*{price}">
 						</div>
-						<div class="modal-body">
-							<form>
-								<div class="form-group">
-									<label for="inputID">ID Transakcji</label>
-									<input class="form-control" type="text" id="ID"></input>
-								</div>
-								<div class="form-group">
-									<label for="inputAmount">Kwota</label>
-									<input class="form-control" type="text" id="Amount"></input>
-								</div>
-								<div class="form-group">
-									<label for="inputDate">Data transakcji</label>
-									<input class="form-control" type="text" id="Date"></input>
-								</div>
-								<div class="form-group">
-									<label for="inputBuyer">ID Kupca</label>
-									<input class="form-control" type="text" id="Buyer"></input>
-								</div>
-								<div class="form-group">
-									<label for="inputWorker">ID Pracownika</label>
-									<input class="form-control" type="text" id="Worker"></input>
-								</div>
-								<div class="form-group">
-									<label for="inputCar">ID Pojazdu</label>
-									<input class="form-control" type="text" id="Car"></input>
-								</div>
-							</form>
+						<div class="form-group">
+							<label for="transactionDate2">Data Transakcji</label>
+							<input class="form-control" type="text" name="transactionDate" id="transactionDate2" th:text="*{transactionDate}">
+						</div>
+						<div class="form-group">
+							<label for="employeeId2">ID Pracownika</label>
+							<input class="form-control" type="text" name="employeeId" id="employeeId2"
+								   th:text="*{employeeId}">
+						</div>
+						<div class="form-group">
+							<label for="carId2">ID Pojazdu</label>
+							<input class="form-control" type="text" name="carId" id="carId2"
+								   th:text="*{carId}">
+						</div>
+						<div class="form-group">
+							<label for="clientId2">ID Klienta</label>
+							<input class="form-control" type="text" name="clientId" id="clientId2"
+								   th:text="*{clientId}">
 						</div>
 						<div class="modal-footer">
-							<button class="btn btn-primary" data-dismiss="modal">Anuluj</button>
-							<button class="btn btn-primary">Potwierdz</button>
+							<button class="btn btn-block btn-primary" type="submit">Potwierdź</button>
 						</div>
-					</div>
-				</div>
-			</div>	
-				<div class="modal" id="deleteModal" tabindex="-1">
-				<div class="modal-dialog modal-sm">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button class="close" data-dismiss="modal">&times;</button>
-						</div>
-						<div class="modal-body">
-							<form>
-								<div class="form-group">
-									<label for="inputID">ID Transakcji</label>
-									<input class="form-control" type="text" id="ID"></input>
-								</div>
-							</form>
-						</div>
-						<div class="modal-footer">
-							<button class="btn btn-primary" data-dismiss="modal">Anuluj</button>
-							<button class="btn btn-primary">Potwierdz</button>
-						</div>
-					</div>
+					</form>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
+
+
+
+
+	
 
 <script type="text/javascript">
 	function getID() {
