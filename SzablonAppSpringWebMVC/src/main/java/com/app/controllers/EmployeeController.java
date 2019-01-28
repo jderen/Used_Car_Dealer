@@ -7,6 +7,7 @@ import com.app.models.dao.*;
 import com.app.models.dto.CarDto;
 import com.app.models.dto.converters.CarConverter;
 import com.app.models.enums.FuelType;
+import com.app.models.enums.Role;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -35,19 +36,23 @@ public class EmployeeController {
         return "employee/login";
     }
 
-    /*todo below*/
-
     @PostMapping("/")
     public String loginPost(@ModelAttribute Account account) {
         if(account.getPassword() != null && account.getPassword() != null && employeeDao !=null){
+            Employee e = new Employee();
             try
             {
-                Employee e = employeeDao.findByUsernameAndPassword(account.getLogin(),account.getPassword()).orElseThrow(NullPointerException::new);
-            }catch (NullPointerException e){
-                System.out.println(e.toString());
+                e = employeeDao.findByUsernameAndPassword(account.getLogin(),account.getPassword()).orElseThrow(NullPointerException::new);
+                if (e.getAccount().getRole() == Role.EMPLOYEE){
+                    return "redirect:/employee/cars";
+                }
+                else if (e.getAccount().getRole() == Role.MANAGER){
+                    return "redirect:/myManager/cars";
+                }
+            }catch (NullPointerException err){
+                System.out.println(err.toString());
                 return "employee/login";
             }
-            return "redirect:/employee/cars";
         }
         return "employee/login";
     }

@@ -80,8 +80,8 @@
 				<td th:text="${t.carId}"></td>
 				<td th:text="${t.clientId}"></td>
 				<td>
-					<a class="btn btn-warning" th:href="@{/employee/transactions/update/{id}(id = ${c.id})}">Modyfikuj</a>
-					<a class="btn btn-danger" th:href="@{/employee/transactions/delete/{id}(id = ${c.id})}">Usuń</a>
+					<a class="btn btn-warning" th:href="@{/employee/transactions/update/{id}(id = ${t.id})}">Modyfikuj</a>
+					<a class="btn btn-danger" th:href="@{/employee/transactions/delete/{id}(id = ${t.id})}">Usuń</a>
 				</td>
 			</tr>
 			</tbody>

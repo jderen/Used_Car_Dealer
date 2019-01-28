@@ -7,6 +7,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.sql.Date;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,7 +29,7 @@ public class Employee {
     //java.sql date type
     //Date date = setSqlDate(java.sql.Date.valueOf("2017-11-15"));
     @Column(name = "hire_date")
-    Date hireDate;
+    LocalDate hireDate;
     BigDecimal salary;
     @OneToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "account_id", unique = true)

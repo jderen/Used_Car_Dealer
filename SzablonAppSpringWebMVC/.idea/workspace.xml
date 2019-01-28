@@ -29,87 +29,86 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="wypozyczalnia@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="wypozyczalnia@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="wypozyczalnia@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="wypozyczalnia: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/app/controllers/EmployeeController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manager/accounts.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="34" column="28" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#815#816#0" expanded="true" />
-                <element signature="e#861#862#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="272">
+              <caret line="86" column="31" selection-start-line="86" selection-start-column="31" selection-end-line="86" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/app/models/dto/converters/TransactionConverter.java">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manager/accountsUpdate.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-421">
-              <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="205">
+              <caret line="70" column="96" selection-start-line="70" selection-start-column="96" selection-end-line="70" selection-end-column="96" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/employee/carsEmployeeViewTL.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1170">
-              <caret line="170" column="17" selection-start-line="170" selection-start-column="17" selection-end-line="170" selection-end-column="17" />
-              <folding>
-                <element signature="n#script#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#script#2;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#script#3;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#script#4;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#script#5;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#script#6;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#script#7;n#body#0;n#html#0;n#!!top" />
-              </folding>
+        <entry file="das://071ee923-9892-4d75-8b78-998b6917d9cb/schema/wypozyczalnia/table/transactions">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/employee/transactions.html">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/app/models/dao/generic/AbstractGenericDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="124" column="40" selection-start-line="124" selection-start-column="40" selection-end-line="124" selection-end-column="40" />
+            <state relative-caret-position="384">
+              <caret line="68" column="36" lean-forward="true" selection-start-line="68" selection-start-column="36" selection-end-line="68" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/carContactInfo.html">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/app/models/dao/generic/GenericDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+            <state relative-caret-position="64">
+              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/employee/clients.html">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manager/transactions.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="127" column="10" lean-forward="true" selection-start-line="99" selection-start-column="4" selection-end-line="127" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/employee/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="26" column="62" selection-start-line="26" selection-start-column="62" selection-end-line="26" selection-end-column="62" />
+            <state relative-caret-position="240">
+              <caret line="23" column="56" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -117,17 +116,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/app/models/Transaction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+            <state relative-caret-position="256">
+              <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/app/models/dto/TransactionDto.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/app/controllers/ManagerEmployeesController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            <state relative-caret-position="-369">
+              <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -136,13 +135,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/app/models/dto/ClientDto.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/app/controllers/ManagerCarsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="11" column="8" selection-start-line="8" selection-end-line="11" selection-end-column="8" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="-1345">
+              <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -156,15 +152,19 @@
         <option value="Enum" />
         <option value="spring-beans.schema" />
         <option value="Interface" />
-        <option value="HTML File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>href</find>
+      <find>manager</find>
     </findStrings>
+    <replaceStrings>
+      <replace>myManager</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -172,39 +172,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/employee/carsClientView.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/future-use/carsSearchTL.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/settings.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/oracle.xml" />
-        <option value="$PROJECT_DIR$/src/main/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/app/configuration/JpaConfiguration.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/carsClientView.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/app/models/dao/CarDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/app/models/dao/TransactionDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/app/models/dto/converters/CarToCarDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/app/models/dto/CarDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/app/models/dao/generic/GenericDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/app/models/dao/MarkModelDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/app/models/dao/ClientDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/app/models/dao/ClientDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/app/models/dao/EmployeeDao.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/persistence.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/app/models/dao/EmployeeDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/carContactInfo.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/employee/login.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/app/models/dao/MarkModelDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/app/models/Address.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/app/models/Account.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/app/models/Car.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/app/models/Employee.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/app/models/MarkModelCar.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/app/models/Client.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/app/controllers/MainController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/app/models/dao/generic/AbstractGenericDao.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/employee/carsClientViewTL.html" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/src/main/java/com/app/models/dto/converters/CarConverter.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/carsClientViewTL.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/employee/updateFile.html" />
@@ -218,11 +190,39 @@
         <option value="$PROJECT_DIR$/src/main/java/com/app/controllers/EmployeeClientController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/employee/updateClient.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/app/controllers/EmployeeTransactionsController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/app/models/Transaction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/app/models/dto/TransactionDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/app/models/dto/converters/TransactionConverter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/app/controllers/EmployeeController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/app/models/dao/AccountsDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/app/models/dto/Role.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/app/models/dto/converters/AccountsConverter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/app/models/dao/AccountsDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/app/controllers/ManagerController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/employee/transactions.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/app/models/dto/AccountDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/app/models/EmployeeDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/app/models/Employee.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/app/models/dto/EmployeeDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/app/models/dto/converters/EmployeeConverter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/app/controllers/ManagerAccountsController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/app/controllers/EmployeeController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/app/controllers/managerTransactionsController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/app/controllers/ManagerTransactionsController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/app/controllers/ManagerEmployeesController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/app/controllers/ManagerClientController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/app/controllers/ManagerCarsController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manager/updateClient.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manager/updateCar.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manager/transactions.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manager/employeesUpdate.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manager/employees.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manager/carsEmployeeViewTL.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manager/carsClientViewTL.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manager/clients.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manager/accounts.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manager/accountsUpdate.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/app/models/Transaction.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
       </list>
     </option>
   </component>
@@ -241,10 +241,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="y" value="-10" />
-    <option name="width" value="1940" />
-    <option name="height" value="1050" />
+    <option name="x" value="-207" />
+    <option name="y" value="-27" />
+    <option name="width" value="1941" />
+    <option name="height" value="1051" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -254,7 +254,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -315,6 +314,27 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SzablonAppSpringWebMVC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SzablonAppSpringWebMVC" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+              <item name="generic" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SzablonAppSpringWebMVC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SzablonAppSpringWebMVC" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
               <item name="dto" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -348,14 +368,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SzablonAppSpringWebMVC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SzablonAppSpringWebMVC" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -377,10 +389,21 @@
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="employee" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="SzablonAppSpringWebMVC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SzablonAppSpringWebMVC" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="manager" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -388,7 +411,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548545003097" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548653068680" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -400,22 +423,26 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\MichalPC1\Documents\GitHub\Used_Car_Dealer\SzablonAppSpringWebMVC\src\main\webapp\WEB-INF\views\employee" />
-      <recent name="C:\Users\MichalPC1\Documents\GitHub\Used_Car_Dealer\SzablonAppSpringWebMVC\src\main\webapp\WEB-INF\views" />
-      <recent name="C:\Users\MichalPC1\Documents\GitHub\Used_Car_Dealer\SzablonAppSpringWebMVC\src\main\webapp\WEB-INF\views\employee\manager" />
-      <recent name="C:\Users\MichalPC1\Documents\GitHub\Used_Car_Dealer\SzablonAppSpringWebMVC\src\main\java\com\app\controllers" />
-      <recent name="C:\Users\MichalPC1\Documents\GitHub\Used_Car_Dealer\SzablonAppSpringWebMVC\src\main\java\com\app\configuration" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.app.configuration" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\MichalPC1\Documents\GitHub\Used_Car_Dealer\SzablonAppSpringWebMVC\src\main\webapp\static\img" />
       <recent name="C:\Users\MichalPC1\Documents\GitHub\Used_Car_Dealer\SzablonAppSpringWebMVC\src\main\webapp\WEB-INF\views" />
       <recent name="C:\Users\MichalPC1\Documents\GitHub\Used_Car_Dealer\SzablonAppSpringWebMVC\src\main\webapp\WEB-INF\views\employee" />
       <recent name="C:\Users\MichalPC1\Documents\GitHub\Used_Car_Dealer\SzablonAppSpringWebMVC\src\main\webapp\WEB-INF\views\future" />
       <recent name="C:\Users\MichalPC1\Documents\GitHub\Used_Car_Dealer\SzablonAppSpringWebMVC\src\main\webapp\WEB-INF\views\manager" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.app.models.dto" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.app.controllers" />
+      <recent name="com.app.configuration" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Moje pliki\bd2\Used_Car_Dealer\xd\SzablonAppSpringWebMVC\src\main\webapp\WEB-INF\views\manager" />
+      <recent name="C:\Users\MichalPC1\Documents\GitHub\Used_Car_Dealer\SzablonAppSpringWebMVC\src\main\webapp\WEB-INF\views\employee" />
+      <recent name="C:\Users\MichalPC1\Documents\GitHub\Used_Car_Dealer\SzablonAppSpringWebMVC\src\main\webapp\WEB-INF\views" />
+      <recent name="C:\Users\MichalPC1\Documents\GitHub\Used_Car_Dealer\SzablonAppSpringWebMVC\src\main\webapp\WEB-INF\views\employee\manager" />
+      <recent name="C:\Users\MichalPC1\Documents\GitHub\Used_Car_Dealer\SzablonAppSpringWebMVC\src\main\java\com\app\controllers" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -438,7 +465,6 @@
       </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -565,6 +591,7 @@
       <workItem from="1548545131586" duration="1057000" />
       <workItem from="1548546230320" duration="1678000" />
       <workItem from="1548587640854" duration="1792000" />
+      <workItem from="1548640017841" duration="12957000" />
     </task>
     <task id="LOCAL-00001" summary="Polish letters work in html now">
       <created>1542977625523</created>
@@ -710,12 +737,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="165146000" />
+    <option name="totallyTimeSpent" value="178103000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1753" height="962" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23892617" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18466076" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -726,7 +754,7 @@
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.3290461" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.3290461" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.7604027" weight="0.33089313" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.7604027" visible="true" weight="0.32972324" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.39978564" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -735,7 +763,7 @@
       <window_info anchor="bottom" id="Spring" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32939914" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.23959732" side_tool="true" weight="0.33089313" />
-      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49932885" weight="0.329429" />
+      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49932885" weight="0.16606498" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="15" weight="0.3290461" />
@@ -748,7 +776,7 @@
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info anchor="right" id="Database" order="7" weight="0.15771812" />
+      <window_info anchor="right" id="Database" order="7" visible="true" weight="0.21179941" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info anchor="right" id="Maven" order="10" />
@@ -793,136 +821,30 @@
     <option name="LAST_COMMIT_MESSAGE" value="better layout for cars managment" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/models/dao/EmployeeDaoImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/models/dto/converters/CarConverter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/models/dao/generic/GenericDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+        <state relative-caret-position="224">
+          <caret line="14" selection-start-line="14" selection-end-line="15" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="das://37e148b0-bb9d-478b-b65e-09a33a49b39a/schema/wypozyczalnia/table/mark_model" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/models/dao/generic/AbstractGenericDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/models/dao/AccountsDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="50" column="44" lean-forward="true" selection-start-line="50" selection-start-column="44" selection-end-line="50" selection-end-column="44" />
+        <state relative-caret-position="96">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/models/dao/TransactionDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/img/bonzo.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/models/dao/EmployeeDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/RuntimeException.java" />
-    <entry file="das://37e148b0-bb9d-478b-b65e-09a33a49b39a/schema/wypozyczalnia/table/cars" />
-    <entry file="das://37e148b0-bb9d-478b-b65e-09a33a49b39a/schema/wypozyczalnia/table/clients" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/configuration/AppConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-611">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/configuration/AppInitialization.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/configuration/JpaConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
-          <caret line="54" column="100" selection-start-line="54" selection-start-column="100" selection-end-line="54" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/models/Account.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/models/Address.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/app/models/dao/CarDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/carsClientViewTL.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="32" selection-start-line="32" selection-end-line="34" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manager/accounts.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/models/dao/ClientDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/models/dao/ClientDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="112">
+          <caret line="7" column="74" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="74" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -931,7 +853,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/app/models/dao/CarDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
+        <state relative-caret-position="80">
           <caret line="5" column="48" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -939,36 +861,93 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/models/dao/AccountsDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/071ee923-9892-4d75-8b78-998b6917d9cb/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/employee/clients.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="926">
+          <caret line="110" column="8" selection-start-line="110" selection-start-column="8" selection-end-line="110" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/employee/carsClientViewTL.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
-          <caret line="75" column="52" lean-forward="true" selection-start-line="75" selection-start-column="52" selection-end-line="75" selection-end-column="52" />
+          <caret line="75" column="52" selection-start-line="75" selection-start-column="52" selection-end-line="75" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/models/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/models/Account.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="21" column="14" lean-forward="true" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/employee/updateCar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="98" column="82" selection-end-line="115" selection-end-column="7" />
-          <folding>
-            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
+        <state relative-caret-position="800">
+          <caret line="71" column="30" lean-forward="true" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/employee/updateClient.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="27" column="6" lean-forward="true" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
+        <state relative-caret-position="320">
+          <caret line="41" column="27" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/models/dto/converters/AccountsConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
-            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/controllers/EmployeeCarsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-912">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/employee/carsEmployeeViewTL.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1728" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/models/Address.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="22" column="38" lean-forward="true" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/app/models/MarkModelCar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
+        <state relative-caret-position="372">
           <caret line="28" column="42" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -976,81 +955,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/controllers/EmployeeClientController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/models/dto/AccountDto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/models/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.project">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/models/Car.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="59" column="25" selection-start-line="48" selection-start-column="14" selection-end-line="59" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/models/Employee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/controllers/EmployeeCarsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="866">
-          <caret line="106" selection-start-line="106" selection-end-line="106" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/controllers/EmployeeTransactionsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="47" column="60" selection-start-line="47" selection-start-column="60" selection-end-line="47" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/controllers/ManagerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/controllers/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/models/dto/converters/ClientConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        <state relative-caret-position="320">
+          <caret line="26" column="12" lean-forward="true" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1059,111 +967,245 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/app/models/dto/CarDto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/models/dto/converters/CarConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="64">
+          <caret line="10" selection-start-line="10" selection-end-line="13" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/app/models/dto/ClientDto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="11" column="8" selection-start-line="8" selection-end-line="11" selection-end-column="8" />
+        <state relative-caret-position="112">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/employee/transactions.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="82" column="115" lean-forward="true" selection-start-line="82" selection-start-column="115" selection-end-line="82" selection-end-column="115" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/models/dto/TransactionDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="11" selection-start-line="11" selection-end-line="14" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/models/Employee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="31" column="10" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/models/dto/EmployeeDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/controllers/EmployeeController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/models/dto/converters/EmployeeConverter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="34" column="28" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
+        <state relative-caret-position="349">
+          <caret line="27" column="69" selection-start-line="27" selection-start-column="69" selection-end-line="27" selection-end-column="69" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/controllers/EmployeeClientController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="52" column="4" lean-forward="true" selection-start-line="52" selection-start-column="4" selection-end-line="77" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/employee/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="26" column="62" selection-start-line="26" selection-start-column="62" selection-end-line="26" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/controllers/EmployeeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="56" column="32" selection-start-line="56" selection-start-column="32" selection-end-line="56" selection-end-column="32" />
+          <folding>
             <element signature="e#815#816#0" expanded="true" />
             <element signature="e#861#862#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/models/Transaction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+    <entry file="das://071ee923-9892-4d75-8b78-998b6917d9cb/schema/wypozyczalnia/table/accounts">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/employee/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="26" column="62" selection-start-line="26" selection-start-column="62" selection-end-line="26" selection-end-column="62" />
+    <entry file="das://071ee923-9892-4d75-8b78-998b6917d9cb/schema/wypozyczalnia/table/employees">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/employee/carsEmployeeViewTL.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/controllers/EmployeeTransactionsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1170">
-          <caret line="170" column="17" selection-start-line="170" selection-start-column="17" selection-end-line="170" selection-end-column="17" />
-          <folding>
-            <element signature="n#script#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#script#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#script#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#script#4;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#script#5;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#script#6;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#script#7;n#body#0;n#html#0;n#!!top" />
-          </folding>
+        <state relative-caret-position="-1505">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/employee/clients.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/controllers/ManagerClientController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="127" column="10" lean-forward="true" selection-start-line="99" selection-start-column="4" selection-end-line="127" selection-end-column="10" />
+        <state relative-caret-position="368">
+          <caret line="73" column="45" lean-forward="true" selection-start-line="73" selection-start-column="45" selection-end-line="73" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/employee/transactions.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/controllers/ManagerAccountsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="44" column="37" selection-start-line="44" selection-start-column="37" selection-end-line="44" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manager/carsEmployeeViewTL.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="23" column="56" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manager/carsClientViewTL.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="23" column="60" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manager/employeesUpdate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="23" column="56" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manager/clients.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="125" column="61" selection-start-line="125" selection-start-column="61" selection-end-line="125" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manager/employees.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-787">
+          <caret line="23" column="56" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manager/updateClient.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
-          <caret line="124" column="40" selection-start-line="124" selection-start-column="40" selection-end-line="124" selection-end-column="40" />
+          <caret line="31" column="56" selection-start-line="31" selection-start-column="56" selection-end-line="31" selection-end-column="56" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/carContactInfo.html">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manager/updateCar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+        <state relative-caret-position="-992">
+          <caret line="22" column="56" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/models/dto/converters/TransactionConverter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/controllers/ManagerTransactionsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-421">
-          <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+        <state relative-caret-position="-1184">
+          <caret line="47" column="28" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/controllers/ManagerEmployeesController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-369">
+          <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/models/dto/TransactionDto.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/controllers/ManagerCarsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="-1345">
+          <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manager/accounts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="86" column="31" selection-start-line="86" selection-start-column="31" selection-end-line="86" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manager/accountsUpdate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="70" column="96" selection-start-line="70" selection-start-column="96" selection-end-line="70" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manager/transactions.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="23" column="56" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/models/Transaction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://071ee923-9892-4d75-8b78-998b6917d9cb/schema/wypozyczalnia/table/transactions">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/models/dao/generic/GenericDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/app/models/dao/generic/AbstractGenericDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="68" column="36" lean-forward="true" selection-start-line="68" selection-start-column="36" selection-end-line="68" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>

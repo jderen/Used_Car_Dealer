@@ -41,13 +41,11 @@ public class JpaConfiguration {
         return dataSource;
     }
 
-    //konfiguracja procidera dla JPA
     @Bean
     public JpaVendorAdapter jpaVendorAdapter() {
         return new HibernateJpaVendorAdapter();
     }
 
-    //metoda ustwiajaca dodatkwoe parametry hibernate
     public Properties jpaProperties() {
         Properties properties = new Properties();
         properties.put("hibernate.dialect", environment.getRequiredProperty("hibernate.dialect"));

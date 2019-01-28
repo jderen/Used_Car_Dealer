@@ -19,7 +19,7 @@ public class Transaction {
     @GeneratedValue
     Long id;
     Double price;
-    @Column(name = "transaction_name")
+    @Column(name = "transaction_date")
     LocalDate transactionDate;
     @ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
     @JoinColumn(name = "employee_id")
