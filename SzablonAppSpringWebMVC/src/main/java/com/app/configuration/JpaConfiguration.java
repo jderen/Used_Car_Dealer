@@ -64,7 +64,6 @@ public class JpaConfiguration {
         return entityManagerFactoryBean;
     }
 
-    //otaczamy obiekt EntityManagerFactory transakcyjnoscia
     @Bean
     @Autowired
     public PlatformTransactionManager transactionManager(EntityManagerFactory factory) {

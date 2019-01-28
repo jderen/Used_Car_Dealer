@@ -15,8 +15,9 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
 @Builder
+
+@Entity
 @Table(name = "Employees")
 public class Employee {
     @Id
@@ -26,19 +27,15 @@ public class Employee {
     String surname;
     @Column(name = "phone_number")
     String phoneNumber;
-    //java.sql date type
-    //Date date = setSqlDate(java.sql.Date.valueOf("2017-11-15"));
     @Column(name = "hire_date")
     LocalDate hireDate;
     BigDecimal salary;
     @OneToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "account_id", unique = true)
     Account account;
-    //eager is here to prevent overflow stack exception
     @ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
     @JoinColumn(name = "address_id")
     Address address;
-
     @OneToMany(cascade = CascadeType.PERSIST, mappedBy = "employee")
     List<Transaction> transactions = new ArrayList<>();
 

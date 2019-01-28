@@ -51,7 +51,7 @@ public class EmployeeController {
                 }
             }catch (NullPointerException err){
                 System.out.println(err.toString());
-                return "employee/login";
+                return "employee/loginFailed";
             }
         }
         return "employee/login";
